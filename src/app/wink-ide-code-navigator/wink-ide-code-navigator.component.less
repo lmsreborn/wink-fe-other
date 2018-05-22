@@ -1,0 +1,88 @@
+.code-tabsets {
+  position: relative;
+  font-size: 12px;
+  -webkit-font-smoothing: antialiased;
+
+  .title-wrapper{
+    color: rgba(255,255,255,.65);
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding: 2px 18px;
+    height: 21px;
+    user-select: none;
+    position: relative;
+  }
+
+  .title {
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    line-height: 21px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}
+
+.code-tabsets.ant-tabs ::ng-deep {
+  color: rgba(255, 255, 255, .65);
+}
+
+.code-tabsets ::ng-deep .ant-tabs-bar {
+  background: #404040;
+  margin-bottom: 0;
+  border-bottom: 1px solid #303030;
+  outline: 0;
+
+  .ant-tabs-tab{
+    border: 1px solid #303030;
+  }
+}
+
+.code-tabsets ::ng-deep .ant-tabs-nav-container {
+  height: 28px !important;
+}
+
+.code-tabsets ::ng-deep .ant-tabs.ant-tabs-card > .ant-tabs-bar {
+  .ant-tabs-tab {
+    border: 1px solid #303030;
+    border-bottom: 0;
+    border-radius: 4px 4px 0 0;
+    background: #505050;
+    transition: all .3s cubic-bezier(.645, .045, .355, 1);
+  }
+
+  .ant-tabs-tab-active{
+    background: #404040;
+    border-color: #303030;
+    color: #1890ff;
+  }
+}
+
+.code-tabsets ::ng-deep > .ant-tabs-bar .ant-tabs-tab-active{
+  background: #404040;
+  border-color: #303030;
+  color: #1890ff;
+}
+
+.code-tabsets ::ng-deep .ant-tabs-tab {
+  min-width: 80px;
+  display: block;
+  width: 100%;
+  float: right;
+  margin: 5px -25px 0 0 !important;
+  border-top-right-radius: 25px 170px !important;
+  border-top-left-radius: 20px 90px !important;
+  padding: 0 30px 0 25px !important;
+  height: 170px;
+  position: relative;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, .6) !important;
+  max-width: 200px;
+  font-size: 12px;
+  line-height: 22px !important;
+}
+
+

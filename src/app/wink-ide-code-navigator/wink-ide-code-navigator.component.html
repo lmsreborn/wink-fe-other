@@ -1,3 +1,22 @@
-<p>
-  wink-ide-code-navigator works!
-</p>
+<nz-tabset [nzTabPosition]="'top'" [nzType]="'card'" [nzSize]="'small'" [nzShowPagination]="'false'" class="code-tabsets">
+  <nz-tab [nzTitle]="titleTemplate">
+    <ng-template #titleTemplate>
+      <div class="title-wrapper">
+        <i class="anticon code-icon anticon-solution"></i>
+        <span class="title">{{"hehe"}}</span>
+      </div>
+    </ng-template>
+  </nz-tab>
+
+  <nz-tab nzTitle="titleTemplate">
+    <ng-template #titleTemplate>
+      <div class="title-wrapper"><i class="anticon anticon-close"></i>{{"hehe"}}</div>
+    </ng-template>
+  </nz-tab>
+
+  <nz-tab nzTitle="Tab 3">
+    Content of Tab Pane 3
+  </nz-tab>
+
+
+</nz-tabset>

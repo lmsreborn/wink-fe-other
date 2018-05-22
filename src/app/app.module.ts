@@ -18,6 +18,7 @@ import { WinkResizeOpbarComponent } from './wink-resize-opbar/wink-resize-opbar.
 import { WinkIdeRightPanelComponent } from './wink-ide-right-panel/wink-ide-right-panel.component';
 import { WinkIdePreviewPanelComponent } from './wink-ide-preview-panel/wink-ide-preview-panel.component';
 import { WinkIdeCodeEditorComponent } from './wink-ide-code-editor/wink-ide-code-editor.component';
+import { WinkIdeCodeNavigatorComponent } from './wink-ide-code-navigator/wink-ide-code-navigator.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { WinkIdeCodeEditorComponent } from './wink-ide-code-editor/wink-ide-code
     WinkIdeRightPanelComponent,
     WinkIdePreviewPanelComponent,
     WinkIdeCodeEditorComponent,
+    WinkIdeCodeNavigatorComponent,
   ],
   imports: [
     BrowserModule,
