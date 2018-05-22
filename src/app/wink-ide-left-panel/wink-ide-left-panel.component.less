@@ -1,0 +1,33 @@
+nz-tabset {
+  border-right: 1px solid #303030;
+  color: rgba(255,255,255,.65);
+}
+
+.side-tabset {
+  height: 100%;
+}
+
+:host /deep/ .ant-tabs-tab {
+  font-size: 12px;
+  width: 34px;
+  height: auto;
+  writing-mode: vertical-lr;
+  letter-spacing: 1px;
+  padding: 15px 7.5px!important;
+}
+
+.ant-tabs-vertical.ant-tabs-left > .ant-tabs-bar {
+  border-right: 1px solid #303030;
+}
+
+
+//TODO: 如何不加host
+:host /deep/ .ant-tabs-vertical.ant-tabs-left > .ant-tabs-bar {
+  border-right: 1px solid #303030;
+  margin-top: -1px;
+  //color: rgba(255,255,255,.65);
+}
+
+
+
+

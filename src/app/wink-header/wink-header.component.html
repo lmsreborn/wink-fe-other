@@ -1,0 +1,35 @@
+<nz-header class="wink-header">
+
+  <div class="logo">
+    <span>
+      <a href="#/">微博流计算开发平台</a>
+    </span>
+  </div>
+
+  <div class="search-box"></div>
+
+
+  <!--TODO: 下拉菜单-->
+  <nz-dropdown [nzPlacement]="'bottomRight'" class="profile">
+    <a nz-dropdown><i class="anticon anticon-user"></i>lms</a>
+    <ul nz-menu nzSelectable>
+      <li nz-menu-item>
+        <a><i class="anticon anticon-user"></i></a>
+      </li>
+      <li nz-menu-item>
+        <a>2nd menu item</a>
+      </li>
+      <li nz-menu-item>
+        <a>3rd menu item</a>
+      </li>
+    </ul>
+  </nz-dropdown>
+
+
+  <ul nz-menu class="navigation" [nzMode]="'horizontal'">
+    <li nz-menu-item>总览</li>
+    <li nz-menu-item>开发</li>
+    <li nz-menu-item>运维</li>
+
+  </ul>
+</nz-header>
