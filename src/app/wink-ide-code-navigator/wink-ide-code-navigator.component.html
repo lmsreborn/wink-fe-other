@@ -1,21 +1,33 @@
 <nz-tabset [nzTabPosition]="'top'" [nzType]="'card'" [nzSize]="'small'" [nzShowPagination]="'false'" class="code-tabsets">
-  <nz-tab [nzTitle]="titleTemplate">
-    <ng-template #titleTemplate>
+
+  <nz-tab [nzTitle]="titleTemplate1">
+    <ng-template #titleTemplate1>
       <div class="title-wrapper">
         <i class="anticon code-icon anticon-solution"></i>
-        <span class="title">{{"hehe"}}</span>
+        <span class="title">{{"test1"}}</span>
+        <i class="anticon close-tab-icon anticon-cross"></i>
       </div>
     </ng-template>
   </nz-tab>
 
-  <nz-tab nzTitle="titleTemplate">
-    <ng-template #titleTemplate>
-      <div class="title-wrapper"><i class="anticon anticon-close"></i>{{"hehe"}}</div>
+  <nz-tab [nzTitle]="titleTemplate2">
+    <ng-template #titleTemplate2>
+      <div class="title-wrapper">
+        <i class="anticon code-icon anticon-solution"></i>
+        <span class="title">{{"test2"}}</span>
+        <i class="anticon close-tab-icon anticon-cross"></i>
+      </div>
     </ng-template>
   </nz-tab>
 
-  <nz-tab nzTitle="Tab 3">
-    Content of Tab Pane 3
+  <nz-tab [nzTitle]="titleTemplate3">
+    <ng-template #titleTemplate3>
+      <div class="title-wrapper">
+        <i class="anticon code-icon anticon-solution"></i>
+        <span class="title">{{"test2"}}</span>
+        <i class="anticon close-tab-icon anticon-cross"></i>
+      </div>
+    </ng-template>
   </nz-tab>
 
 

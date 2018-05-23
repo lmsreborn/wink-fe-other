@@ -2,6 +2,7 @@
   position: relative;
   font-size: 12px;
   -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 
   .title-wrapper{
     color: rgba(255,255,255,.65);
@@ -31,6 +32,18 @@
   color: rgba(255, 255, 255, .65);
 }
 
+//
+
+
+//??
+.code-tabsets ::ng-deep .ant-tabs-nav {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  padding-right: 25px;
+}
+
+
 .code-tabsets ::ng-deep .ant-tabs-bar {
   background: #404040;
   margin-bottom: 0;
@@ -42,11 +55,21 @@
   }
 }
 
+.code-tabsets ::ng-deep > .ant-tabs-bar .ant-tabs-tab {
+  border: 1px solid #303030;
+  border-bottom: 0;
+  border-radius: 4px 4px 0 0;
+  transition: all .3s cubic-bezier(.645,.045,.355,1);
+}
+
+.code-tabsets .ant-tabs-tab-active{
+  z-index: 6;
+}
 .code-tabsets ::ng-deep .ant-tabs-nav-container {
   height: 28px !important;
 }
 
-.code-tabsets ::ng-deep .ant-tabs.ant-tabs-card > .ant-tabs-bar {
+.code-tabsets ::ng-deep > .ant-tabs-bar {
   .ant-tabs-tab {
     border: 1px solid #303030;
     border-bottom: 0;
@@ -54,11 +77,15 @@
     background: #505050;
     transition: all .3s cubic-bezier(.645, .045, .355, 1);
   }
-
   .ant-tabs-tab-active{
     background: #404040;
     border-color: #303030;
     color: #1890ff;
+
+    .title {
+      color: #1890ff;
+      font-weight: 500;
+    }
   }
 }
 
@@ -85,4 +112,30 @@
   line-height: 22px !important;
 }
 
+// 前边的图标
+.code-tabsets ::ng-deep .code-icon.anticon{
+  position: absolute;
+  left: 0;
+  top: 6px;
+  margin-right: 0;
+}
 
+.ant-tabs-nav .ant-tabs-tab .anticon {
+  margin-right: 8px;
+}
+
+.code-tabsets .close-tab-icon.anticon{
+  margin-right: 0;
+  width: 16px;
+  display: block;
+  height: 16px;
+  font-size: 12px;
+  line-height: 16px;
+  transform-origin: left top;
+  transform: scale(.85);
+  right: 0;
+  text-align: center;
+  top: 6px;
+  color: rgba(255,255,255,.65);
+  position: absolute;
+}
