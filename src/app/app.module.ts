@@ -19,6 +19,12 @@ import { WinkIdeRightPanelComponent } from './wink-ide-right-panel/wink-ide-righ
 import { WinkIdePreviewPanelComponent } from './wink-ide-preview-panel/wink-ide-preview-panel.component';
 import { WinkIdeCodeEditorComponent } from './wink-ide-code-editor/wink-ide-code-editor.component';
 import { WinkIdeCodeNavigatorComponent } from './wink-ide-code-navigator/wink-ide-code-navigator.component';
+import { WinkLeftSideContentComponent } from './wink-left-side-content/wink-left-side-content.component';
+import { WinkIdeCodePanelComponent } from './wink-ide-code-panel/wink-ide-code-panel.component';
+import { WinkIdeCodeRightSidebarComponent } from './wink-ide-code-right-sidebar/wink-ide-code-right-sidebar.component';
+import { WinkIdeCodeDebugerComponent } from './wink-ide-code-debuger/wink-ide-code-debuger.component';
+import { WinkOverviewWelcomePanelComponent } from './wink-overview-welcome-panel/wink-overview-welcome-panel.component';
+import {MonacoEditorModule} from 'ngx-monaco-editor';
 
 @NgModule({
   declarations: [
@@ -37,6 +43,11 @@ import { WinkIdeCodeNavigatorComponent } from './wink-ide-code-navigator/wink-id
     WinkIdePreviewPanelComponent,
     WinkIdeCodeEditorComponent,
     WinkIdeCodeNavigatorComponent,
+    WinkLeftSideContentComponent,
+    WinkIdeCodePanelComponent,
+    WinkIdeCodeRightSidebarComponent,
+    WinkIdeCodeDebugerComponent,
+    WinkOverviewWelcomePanelComponent,
   ],
   imports: [
     BrowserModule,
@@ -44,7 +55,8 @@ import { WinkIdeCodeNavigatorComponent } from './wink-ide-code-navigator/wink-id
     HttpClientModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
-    NgZorroAntdModule.forRoot()
+    NgZorroAntdModule.forRoot(),
+    MonacoEditorModule.forRoot()
   ],
   bootstrap: [AppComponent]
 })

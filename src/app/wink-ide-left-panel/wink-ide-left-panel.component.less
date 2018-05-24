@@ -1,31 +1,77 @@
 nz-tabset {
   border-right: 1px solid #303030;
-  color: rgba(255,255,255,.65);
+  color: rgba(255, 255, 255, .65);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 .side-tabset {
   height: 100%;
 }
 
-:host /deep/ .ant-tabs-tab {
-  font-size: 12px;
-  width: 34px;
-  height: auto;
-  writing-mode: vertical-lr;
-  letter-spacing: 1px;
-  padding: 15px 7.5px!important;
+.side-tabset ::ng-deep .ant-tabs-nav-wrap {
+  background: #505050;
 }
 
 .ant-tabs-vertical.ant-tabs-left > .ant-tabs-bar {
+
   border-right: 1px solid #303030;
+
+}
+
+// 左还是右显示蓝色的滚条
+.side-tabset ::ng-deep > .ant-tabs-bar .ant-tabs-ink-bar {
+  left: 1px;
+}
+
+.side-tabset ::ng-deep .ant-tabs-tab-active {
+  background: #404040;
+  border-bottom: 1px solid #303030;
+  border-top: 1px solid #303030;
+}
+
+//TODO: 如何不加host
+
+.side-tabset ::ng-deep {
+
+  //border 1px
+  .ant-tabs-nav-container {
+    border-right: 1px solid #303030;
+  }
+
+  .ant-tabs-tab {
+    width: 34px;
+    margin-bottom: 0 !important;
+    height: auto;
+    writing-mode: vertical-lr;
+    padding: 15px 7.5px !important;
+    font-size: 12px;
+    letter-spacing: 1px;
+  }
+
+  .ant-tabs-vertical.ant-tabs-left > .ant-tabs-bar {
+    float: left;
+    border-right: 1px solid #303030;
+    margin-top: -1px;
+    //color: rgba(255,255,255,.65);
+  }
 }
 
 
-//TODO: 如何不加host
-:host /deep/ .ant-tabs-vertical.ant-tabs-left > .ant-tabs-bar {
-  border-right: 1px solid #303030;
+// TODO: 黑科技？？
+.side-tabset ::ng-deep .ant-tabs-bar{
+  height: ~ "calc(100% + 1px)";
   margin-top: -1px;
-  //color: rgba(255,255,255,.65);
+}
+
+.side-tabset ::ng-deep .ant-tabs-content {
+  padding: 0!important;
+  height: 100%;
+  border-left: 1px solid #303030;
+}
+
+.side-tabset ::ng-deep .ant-tabs-tabpane-active {
+  height: 100%;
 }
 
 
