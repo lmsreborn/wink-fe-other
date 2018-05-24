@@ -1,0 +1,70 @@
+<div class="menu">
+  <div class="tree-menu">
+
+    <!--//TODO: 添加搜索-->
+
+    <nz-tooltip>
+      <span nz-tooltip class="icon"><i class="anticon anticon-file-add"></i>
+      <ng-template #nzTemplate>
+        <span class="tooltip-title">新建</span>
+      </ng-template>
+      </span>
+    </nz-tooltip>
+
+    <nz-tooltip>
+      <span nz-tooltip class="icon"><i class="anticon anticon-folder-add"></i>
+      <ng-template #nzTemplate>
+        <span class="tooltip-title">新建文件夹</span>
+      </ng-template>
+      </span>
+    </nz-tooltip>
+
+    <nz-tooltip>
+      <span nz-tooltip class="icon"><i class="anticon anticon-search"></i>
+      <ng-template #nzTemplate>
+        <span class="tooltip-title">搜索</span>
+      </ng-template>
+      </span>
+    </nz-tooltip>
+
+
+    <nz-tooltip>
+      <span nz-tooltip class="icon"><i class="anticon anticon-reload"></i>
+      <ng-template #nzTemplate>
+        <span class="tooltip-title">刷新</span>
+      </ng-template>
+      </span>
+    </nz-tooltip>
+
+
+    <nz-tooltip>
+      <span nz-tooltip class="icon"><i class="anticon anticon-environment-o"></i>
+      <ng-template #nzTemplate>
+        <span class="tooltip-title">定位</span>
+      </ng-template>
+      </span>
+    </nz-tooltip>
+
+
+    <!--<span nz-tooltip="新建文件夹" class="icon"><i class="anticon anticon-folder-add"></i></span>-->
+    <!--<span nz-tooltip="搜索" class="icon"><i class="anticon anticon-search"></i></span>-->
+    <!--<span nz-tooltip="刷新" class="icon"><i class="anticon anticon-reload"></i></span>-->
+    <!--<span nz-tooltip="定位" class="icon"><i class="anticon anticon-environment-o"></i></span>-->
+
+  </div>
+</div>
+
+
+<!--// TODO: 架构调整-->
+<div class="content">
+  <nz-spin [nzSpinning]="isSpinning">
+    <!--<nz-tree [(ngModel)]="nodes">-->
+    <!--<ng-template #nzTreeTemplate let-node>-->
+        <!--<span class="nz-folder ng-star-inserted focus" draggable="node.getParentNode()!==null" aria-grabbed="true" [class.active]="node.isSelected">-->
+          <!--<span class="nz-folder-icon"></span>-->
+          <!--<span class="nz-folder-name">{{node.title}}</span>-->
+        <!--</span>-->
+    <!--</ng-template>-->
+    <!--</nz-tree>-->
+  </nz-spin>
+</div>

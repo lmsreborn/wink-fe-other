@@ -1,0 +1,74 @@
+:host {
+  display: block;
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.menu {
+  position: relative;
+  height: 40px;
+  width: 100%;
+  text-align: right;
+  overflow: hidden;
+  border-bottom: 1px solid #303030;
+
+  span.icon {
+    cursor: pointer;
+    font-size: 12px;
+    margin-right: 10px;
+    line-height: 40px;
+
+    :hover {
+      color: #1890ff;
+    }
+  }
+
+  .anticon {
+    display: inline-block;
+    font-style: normal;
+    vertical-align: baseline;
+    text-align: center;
+    text-transform: none;
+    line-height: 1;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+.tooltip-title {
+
+  // TODO: 为什么换成inline-block就不行
+  display: block;
+  text-align: center;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.content {
+  height: ~"calc(100% - 40px)";
+  overflow: auto;
+  position: relative;
+  display: block;
+  min-width: 100%;
+
+  nz-tree {
+    padding: 0 0 15px 15px;
+    margin: 0;
+    cursor: pointer;
+    display: inline-block;
+    min-width: 100%
+
+  }
+}
+
+.ant-tree li span {
+  user-select: none;
+  border-top: 2px solid transparent;
+  border-bottom: 2px solid transparent;
+  margin-top: -2px;
+  -webkit-user-drag: element;
+}
+
