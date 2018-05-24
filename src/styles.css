@@ -1,2 +1,2 @@
 @import "~ng-zorro-antd/src/ng-zorro-antd.less";
-/*@import "your-theme-file.less";   !* You can add global styles to this file, and also import other style files *!*/
+@import "./theme.less";
