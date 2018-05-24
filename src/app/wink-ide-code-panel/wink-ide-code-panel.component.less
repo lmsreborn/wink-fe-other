@@ -1,0 +1,43 @@
+app-wink-ide-code-editor{
+  width: ~"calc(100% - 33px)";
+  height: 100%;
+  position: relative;
+  background: #333;
+}
+
+ngx-monaco-editor{
+  background: #2B2B2B;
+  width: ~"calc(100% - 33px)";
+  height: 100%;
+}
+
+//TODO: 颜色抽离出来
+
+//ngx-monaco-editor ::ng-deep .monaco-editor .margin {
+//  background: #2B2B2B;
+//}
+//
+//ngx-monaco-editor ::ng-deep .monaco-editor-background{
+//  background: #2B2B2B;
+//}
+app-wink-ide-code-right-sidebar{
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+
+  .ant-tabs-tab {
+    width: 34px;
+    margin-bottom: 0 !important;
+    height: auto;
+    writing-mode: vertical-lr;
+    padding: 15px 7.5px !important;
+    font-size: 12px;
+    letter-spacing: 1px;
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+  }
+}
+
+
+
