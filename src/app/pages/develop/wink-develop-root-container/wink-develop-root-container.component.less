@@ -1,0 +1,34 @@
+nz-layout {
+  height: 100vh;
+  width: 100vw;
+  background-color: #333;
+}
+
+nz-content {
+  overflow: auto;
+  margin-top: 50px;
+  height: calc(100vh - 50px);
+  position: relative;
+  transition: all cubic-bezier(.08, .82, .17, 1) .5s;
+}
+
+app-wink-ide-left-panel {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 15;
+  overflow: hidden;
+  width: 270px;
+  background: #404040;
+  display: block;
+}
+
+app-wink-ide-right-panel {
+  position: absolute;
+  overflow: hidden;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  left: 270px;
+  background: #404040;
+}
