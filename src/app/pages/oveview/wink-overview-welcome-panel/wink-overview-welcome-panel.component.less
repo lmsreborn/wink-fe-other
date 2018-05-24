@@ -1,21 +1,147 @@
-.welcome-panel{
+.welcome-panel {
   display: block;
   background: #404040;
   padding: 16px;
   border-bottom: 1px solid #303030;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 
-  .welcome-panel-detail{
+  .welcome-panel-detail {
     display: flex;
 
-    .main{
+    .main {
       -webkit-box-flex: 1;
       flex: auto;
 
-      .row-set{
+      .row-set {
         display: flex;
+
+        .welcome-info-overview {
+          -webkit-box-flex: 1;
+          flex: auto;
+
+          .pageHeaderContent {
+            display: flex;
+
+            .avatar {
+              -webkit-box-flex: 0;
+              flex: 0 1 72px;
+              margin-bottom: 8px;
+
+              > nz-avatar {
+                border-radius: 72px;
+                display: block;
+                width: 72px;
+                height: 72px;
+              }
+            }
+
+            .content {
+              position: relative;
+              top: 4px;
+              margin-left: 24px;
+              -webkit-box-flex: 1;
+              flex: 1 1 auto;
+              color: rgba(255, 255, 255, .45);
+              line-height: 22px;
+
+              .content-title {
+                font-size: 20px;
+                line-height: 28px;
+                font-weight: 500;
+                color: rgba(255, 255, 255, .85);
+                margin-bottom: 12px;
+                margin-top: 4px;
+
+              }
+            }
+          }
+        }
+
+        .resource-info-overview {
+          min-width: 242px;
+          text-align: right;
+          margin: 8px;
+          -webkit-box-flex: 1;
+          -ms-flex: auto;
+          flex: auto;
+
+          .resource-info {
+            zoom: 1;
+            float: right;
+            white-space: nowrap;
+
+            .resource-item{
+              padding: 0 32px 0 64px;
+              position: relative;
+              display: inline-block;
+              //border-right: 1px solid #303030;
+
+              > p {
+                color: rgba(255, 255, 255, .85);
+                font-size: 30px;
+                line-height: 38px;
+                margin: 0;
+
+                &:first-child {
+                  color: rgba(255, 255, 255, .45);
+                  font-size: 14px;
+                  line-height: 22px;
+                  margin-bottom: 4px;
+
+                  .cu-residue-day {
+                    margin-left: 10px;
+                  }
+
+                  .error-status {
+                    //color: #f5222d!important;
+                  }
+                }
+              }
+
+              .icon {
+                display: block;
+                position: absolute;
+                font-size: 16px;
+                width: 32px;
+                height: 32px;
+                vertical-align: middle;
+                line-height: 32px;
+                text-align: center;
+                border-radius: 50%;
+                color: #fff;
+                background: #1890ff;
+                top: 28px;
+                left: 12px;
+              }
+
+            }
+
+          }
+        }
       }
     }
   }
 }
 
+.welcome-panel ::ng-deep .desc {
+  margin-left: 8px;
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 700;
+  display: inline-block;
+  max-width: 240px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  vertical-align: top;
+}
 
+.welcome-panel ::ng-deep .cu-residue-day {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  color: red;
+}
+
+.welcome-panel .resource-item:not(:last-child){
+  border-right: 1px solid #303030;
+}

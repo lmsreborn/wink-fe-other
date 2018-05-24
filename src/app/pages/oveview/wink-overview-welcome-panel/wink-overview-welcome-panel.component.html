@@ -2,15 +2,78 @@
   <div class="welcome-panel-detail">
     <div class="main">
       <div class="row-set">
-          <div class="welcome-info-overview">
-            <div class="pageHeaderContent">
-              <div class="avatar"></div>
-              <div class="content"></div>
+        <div class="welcome-info-overview">
+
+          <div class="pageHeaderContent">
+            <div class="avatar">
+              <nz-avatar [nzSize]="'large'" [nzSrc]="imageURL"></nz-avatar>
+            </div>
+
+            <div class="content">
+              <div class="content-title">
+                <span>Hi，{{userName}}，欢迎使用Wink计算平台</span>
+              </div>
+              <div>
+                {{projectDescription}}
+                <nz-tooltip [nzTitle]="projectName">
+                  <span nz-tooltip class="desc"> {{projectName}}</span>
+                </nz-tooltip>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!--资源使用情况-->
+        <!--TODO: 文字重构-->
+        <div class="resource-info-overview">
+          <div class="resource-info">
+
+
+            <div class="resource-item">
+              <p>已使用CU</p>
+              <p>{{usedCUNum}} CU</p>
+              <span class="icon">
+                <i class="anticon anticon-cloud"></i>
+              </span>
+            </div>
+
+            <div class="resource-item">
+              <p>已购买CU</p>
+              <p>{{purchasedCUNum}} CU</p>
+              <span class="icon">
+                <i class="anticon anticon-wallet"></i>
+              </span>
+            </div>
+
+            <div class="resource-item">
+              <p>使用率</p>
+              <p>{{usage}} % </p>
+              <span class="icon">
+                <i class="anticon anticon-pie-chart"></i>
+              </span>
             </div>
 
 
+            <div class="resource-item">
+              <p>
+                剩余可用时间
+
+                <a target="_blank" class="cu-residue-day error-status">
+                  <i class="anticon anticon-exclamation-circle-o"
+                     [nz-tooltip]=resourceNotification>
+                  </i>
+                </a>
+
+              </p>
+              <p>{{leftUsageDays}} 天 </p>
+              <span class="icon">
+              <i class="anticon anticon-pay-circle"></i>
+              </span>
+            </div>
+
           </div>
-          <div class="resource-info-overview"></div>
+        </div>
       </div>
     </div>
   </div>
