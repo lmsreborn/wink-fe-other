@@ -3,7 +3,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {NgModule} from '@angular/core';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
-import {NgZorroAntdModule} from 'ng-zorro-antd';
+// import {NgZorroAntdModule} from './shared/ng-zorro-antd.module';
+import { NgZorroAntdModule } from 'ng-zorro-antd';
 import {AppComponent} from './app.component';
 import {LoginFormComponent} from './login-form/login-form.component';
 import {WinkHeaderComponent} from './wink-header/wink-header.component';
@@ -24,6 +25,10 @@ import {MonacoEditorModule} from 'ngx-monaco-editor';
 import {WinkOverviewRootContainerComponent} from './pages/oveview/wink-overview-root-container/wink-overview-root-container.component';
 import {WinkDevelopRootContainerComponent} from './pages/develop/wink-develop-root-container/wink-develop-root-container.component';
 import {RouterModule, Routes} from '@angular/router';
+import { WinkOverviewInstanceInfoComponent } from './pages/oveview/wink-overview-instance-info/wink-overview-instance-info.component';
+import { WinkOverviewProjectCurveComponent } from './pages/oveview/wink-overview-project-curve/wink-overview-project-curve.component';
+import {NzMeasureScrollbarService} from 'ng-zorro-antd/src/core/services/nz-measure-scrollbar.service';
+import {NgZorroAntdModuleX} from './shared/ng-zorro-antd.module';
 
 
 // TODO: 分离，添加router module
@@ -59,6 +64,8 @@ const appRoutes: Routes = [
     WinkOverviewWelcomePanelComponent,
     WinkOverviewRootContainerComponent,
     WinkDevelopRootContainerComponent,
+    WinkOverviewInstanceInfoComponent,
+    WinkOverviewProjectCurveComponent,
   ],
   imports: [
     BrowserModule,
@@ -66,6 +73,9 @@ const appRoutes: Routes = [
     HttpClientModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
+
+    // TODO: BUG, 解决依赖
+    // NgZorroAntdModuleX.forRoot(),
     NgZorroAntdModule.forRoot(),
     MonacoEditorModule.forRoot(),
     RouterModule.forRoot(
@@ -73,7 +83,8 @@ const appRoutes: Routes = [
       { enableTracing: true } // <-- debugging purposes only
     )
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  // providers: [NzMeasureScrollbarService]
 })
 export class AppModule {
 }

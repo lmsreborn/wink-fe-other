@@ -1,0 +1,52 @@
+<nz-card [nzTitle]="'作业运行情况'"
+         [nzBordered]="false"
+         [nzExtra]="extraTemplate">
+  <nz-table #basicTable [nzData]="dataSet" [nzSize]="'small'" [nzBordered]="false">
+    <thead>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Address</th>
+      <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let data of basicTable.data" class="test1">
+      <td class="test">{{data.name}}</td>
+      <td>{{data.age}}</td>
+      <td>{{data.address}}</td>
+      <td>
+        <a>Action 一 {{data.name}}</a>
+        <nz-divider nzType="vertical"></nz-divider>
+        <a>Delete</a>
+      </td>
+    </tr>
+    </tbody>
+  </nz-table>
+
+
+
+
+  <ng-template #extraTemplate>
+    <span class="subtitle">
+
+      <!--运行-->
+      运行
+      <em>{{runningInstanceNum}}</em>
+
+      <!--分隔符: 中文逗号 + 空格-->
+      ，暂停
+
+      <em>{{pausedInstanceNum}}</em>
+      ，停止
+
+      <em>{{quitInstanceNum}}</em>
+      ，共
+      <em>{{allInstanceNum}}</em>
+      作业
+
+
+    </span>
+  </ng-template>
+
+</nz-card>
