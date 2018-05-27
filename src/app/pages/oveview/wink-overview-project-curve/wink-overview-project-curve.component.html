@@ -1,1 +1,26 @@
-<nz-table></nz-table>
+<nz-card nzSize="large">
+  <nz-card-tab>
+    <nz-tabset [nzSize]="'large'" [nzTabBarExtraContent]="extraTemplate">
+      <nz-tab nzTitle="整体输入RPS趋势">
+      </nz-tab>
+      <nz-tab nzTitle="整体输出RPS趋势"></nz-tab>
+    </nz-tabset>
+
+    <ng-template #extraTemplate>
+      <app-wink-time-range></app-wink-time-range>
+    </ng-template>
+  </nz-card-tab>
+
+
+  <div>
+
+    <h4 class="title"> 整体输入RPS趋势</h4>
+    <div class="chart"></div>
+
+
+    <!--TODO: add echarts-->
+    <div></div>
+
+  </div>
+
+</nz-card>
