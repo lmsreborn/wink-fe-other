@@ -25,4 +25,8 @@
 // style/core/base
 
 6. @table-row-hover-bg : #404040
+7. @item-active-bg         : @primary-color;
+   @item-hover-bg          : @primary-color;
 
+8. @link-hover-color       : @text-color;
+   @link-active-color      : @text-color;

@@ -6,25 +6,39 @@
     </span>
   </div>
 
-  <div class="search-box"></div>
+  <!--<div class="search-box">-->
+    <!--<nz-select></nz-select>-->
+  <!--</div>-->
 
 
   <!--TODO: 下拉菜单-->
   <nz-dropdown [nzPlacement]="'bottomRight'" class="profile">
-    <a nz-dropdown><i class="anticon anticon-user"></i>lms</a>
+    <a nz-dropdown><i class="anticon anticon-user"></i>
+      lmc395801555
+      <i class="anticon anticon-caret-down caret-down"></i>
+    </a>
+
     <ul nz-menu nzSelectable>
       <li nz-menu-item>
-        <a><i class="anticon anticon-user"></i></a>
+        <a class="sub-menu-title"><i class="anticon anticon-bars" style="margin-right: 8px"></i>项目管理</a>
       </li>
       <li nz-menu-item>
-        <a>2nd menu item</a>
-      </li>
-      <li nz-menu-item>
-        <a>3rd menu item</a>
+        <a class="sub-menu-title"><i class="anticon anticon-logout" style="margin-right: 8px"></i>退出登录</a>
       </li>
     </ul>
   </nz-dropdown>
 
+
+  <!--TODO: 链接帮助-->
+  <nz-tooltip [nzTitle]="'帮助'" [nzPlacement]="'bottom'">
+    <span class="help">
+      <a href="_blank">
+        <i class="anticon anticon-question-circle-o"></i>
+      </a>
+
+    </span>
+
+  </nz-tooltip>
 
   <ul nz-menu class="navigation" [nzMode]="'horizontal'">
     <li nz-menu-item>总览</li>

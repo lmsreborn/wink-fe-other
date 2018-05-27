@@ -23,6 +23,7 @@
       margin-left: 50px;
       font-size: 16px;
       user-select: none;
+      font-weight: 700;
 
       a {
         color: rgba(255, 255, 255, .85);
@@ -34,15 +35,40 @@
   .profile {
     float: right;
     transition: all .3s;
+    position: relative;
+    display: inline-block;
 
     a {
       color: rgba(255, 255, 255, .65);
-
-      i {
-        margin-right: 8px;
-      }
+      padding: 0 12px;
+      display: block;
     }
 
+    &:hover {
+      background: #1890ff;
+    }
+    //
+    //::ng-deep anticon {
+    //  margin-right: 12px;
+    //}
+
+  }
+
+  .search-box {
+    float: left;
+    padding-left: 50px;
+  }
+
+  .help {
+    float: right;
+    transition: all .3s;
+    margin-right: 8px;
+
+    a {
+      padding: 0 12px;
+      color: rgba(255, 255, 255, .65);
+      display: block;
+    }
   }
 
   .navigation {
@@ -50,14 +76,23 @@
     height: 49px;
     line-height: 50px;
     border-bottom: none;
-    margin-right: 128px;
+    font-weight: 700;
 
-
-
-    &.ant-menu{
+    &.ant-menu {
       background: #404040;
-      color: rgba(255,255,255,.65);
+      color: rgba(255, 255, 255, .65);
     }
   }
 
+  .caret-down {
+    transform: scale(.5);
+  }
+
+  .sub-menu-title:hover{
+    color: rgba(255, 255, 255, .65);
+  }
+
 }
+
+
+
