@@ -31,6 +31,7 @@ import { WinkInstanceStatusBarComponent } from './wink-instance-status-bar/wink-
 import { WinkTimeRangeComponent } from './pages/oveview/wink-time-range/wink-time-range.component';
 import { WinkOverviewProjectInfoComponent } from './pages/oveview/wink-overview-project-info/wink-overview-project-info.component';
 import { WinkOverviewUpgradeInfoComponent } from './pages/oveview/wink-overview-upgrade-info/wink-overview-upgrade-info.component';
+import { WinkOverviewUserGuideComponent } from './pages/oveview/wink-overview-user-guide/wink-overview-user-guide.component';
 
 
 // TODO: 分离，添加router module
@@ -72,6 +73,7 @@ const appRoutes: Routes = [
     WinkTimeRangeComponent,
     WinkOverviewProjectInfoComponent,
     WinkOverviewUpgradeInfoComponent,
+    WinkOverviewUserGuideComponent,
   ],
   imports: [
     BrowserModule,
