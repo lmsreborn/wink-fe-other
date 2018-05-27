@@ -7,7 +7,7 @@
   </div>
 
   <!--<div class="search-box">-->
-    <!--<nz-select></nz-select>-->
+  <!--<nz-select></nz-select>-->
   <!--</div>-->
 
 
@@ -30,15 +30,27 @@
 
 
   <!--TODO: 链接帮助-->
-  <nz-tooltip [nzTitle]="'帮助'" [nzPlacement]="'bottom'">
-    <span class="help">
-      <a href="_blank">
-        <i class="anticon anticon-question-circle-o"></i>
-      </a>
-
-    </span>
-
+  <nz-tooltip [nzPlacement]="'bottom'">
+      <span nz-tooltip class="help"><i class="anticon anticon-question-circle-o"></i>
+      <ng-template #nzTemplate>
+        <span class="tooltip-title">帮助</span>
+      </ng-template>
+      </span>
   </nz-tooltip>
+  <!--<a nz-tooltip="帮助" href="#" class="help" [nzPlacement]="'bottom'"><i class="anticon anticon-question-circle-o"></i></a>-->
+
+  <!--<nz-tooltip [nzPlacement]="'left'">-->
+  <!--<span class="help">-->
+  <!--<a href="_blank">-->
+  <!--<i class="anticon anticon-question-circle-o"></i>-->
+  <!--</a>-->
+  <!--</span>-->
+
+  <!--<ng-template #nzTemplate >-->
+  <!--<i class="anticon anticon-file"></i> <span>带图标的Tooltip</span>-->
+  <!--</ng-template>-->
+
+  <!--</nz-tooltip>-->
 
   <ul nz-menu class="navigation" [nzMode]="'horizontal'">
     <li nz-menu-item>总览</li>
