@@ -1,30 +1,32 @@
 <nz-card [nzTitle]="'作业运行情况'"
          [nzBordered]="false"
          [nzExtra]="extraTemplate">
-  <nz-table #basicTable [nzData]="dataSet" [nzSize]="'small'" [nzBordered]="false">
-    <thead>
+  <nz-table #instanceInfoTable [nzData]="dataSet" [nzSize]="'small'" [nzBordered]="false" class="zebra-table">
+    <thead nzSingleSort>
     <tr>
-      <th>Name</th>
-      <th>Age</th>
-      <th>Address</th>
-      <th>Action</th>
+      <th class="card-th">运行状态</th>
+      <th>名称</th>
+      <th nzShowSort nzSortKey="delay">业务延时</th>
+      <th nzShowSort nzSortKey="startOffset">启动位点</th>
+      <th nzShowSort nzSortKey="gmtOperated">最近操作时间</th>
+      <th nzShowSort nzSortKey="resourceSlot">资源消耗</th>
     </tr>
     </thead>
+
     <tbody>
-    <tr *ngFor="let data of basicTable.data" class="test1">
-      <td class="test">{{data.name}}</td>
-      <td>{{data.age}}</td>
-      <td>{{data.address}}</td>
-      <td>
-        <a>Action 一 {{data.name}}</a>
-        <nz-divider nzType="vertical"></nz-divider>
-        <a>Delete</a>
+    <tr *ngFor="let instance of instanceInfoTable.data" class="test1">
+      <td class="card-th">
+        <!--<nz-badge [nzStatus]=barStatus [nzText]="'运行'"></nz-badge>-->
+        <app-wink-instance-status-bar></app-wink-instance-status-bar>
       </td>
+      <td><a href="_blank">{{instance.name}}</a></td>
+      <td>{{instance.delay}} s</td>
+      <td>{{instance.startOffset}}</td>
+      <td>{{instance.gmtLastOperation}}</td>
+      <td>{{instance.resourceSlot}} CU</td>
     </tr>
     </tbody>
   </nz-table>
-
-
 
 
   <ng-template #extraTemplate>

@@ -21,7 +21,7 @@
       "prefix": "app",
       "styles": [
         "../node_modules/ng-zorro-antd/src/ng-zorro-antd.less",
-        "./styles.css"
+        "styles.less"
       ],
       "scripts": [],
       "environmentSource": "environments/environment.ts",

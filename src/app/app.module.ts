@@ -27,8 +27,7 @@ import {WinkDevelopRootContainerComponent} from './pages/develop/wink-develop-ro
 import {RouterModule, Routes} from '@angular/router';
 import { WinkOverviewInstanceInfoComponent } from './pages/oveview/wink-overview-instance-info/wink-overview-instance-info.component';
 import { WinkOverviewProjectCurveComponent } from './pages/oveview/wink-overview-project-curve/wink-overview-project-curve.component';
-import {NzMeasureScrollbarService} from 'ng-zorro-antd/src/core/services/nz-measure-scrollbar.service';
-import {NgZorroAntdModuleX} from './shared/ng-zorro-antd.module';
+import { WinkInstanceStatusBarComponent } from './wink-instance-status-bar/wink-instance-status-bar.component';
 
 
 // TODO: 分离，添加router module
@@ -66,6 +65,7 @@ const appRoutes: Routes = [
     WinkDevelopRootContainerComponent,
     WinkOverviewInstanceInfoComponent,
     WinkOverviewProjectCurveComponent,
+    WinkInstanceStatusBarComponent,
   ],
   imports: [
     BrowserModule,

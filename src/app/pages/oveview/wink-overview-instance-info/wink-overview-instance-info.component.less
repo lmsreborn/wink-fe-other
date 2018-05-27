@@ -1,7 +1,22 @@
 @component-background: #404040;
 
+//@import "../../style";
 nz-card {
   margin-bottom: 24px;
+
+   & ::ng-deep .ant-card-body {
+     height: 475px;
+     padding: 0px;
+
+     .ant-table.ant-table-small{
+       border: 0;
+       margin-top: 1px;
+
+       .card-th {
+         padding-left: 24px!important;
+       }
+     }
+  }
 }
 
 //.ant-card {
@@ -69,3 +84,21 @@ nz-card {
 //:host ::ng-deep .test1{
 //  border-bottom: 0px;
 //}
+
+.subtitle {
+  color: rgba(255,255,255,.85);
+  margin-left: 16px;
+
+  em {
+    color: #1890ff;
+    font-weight: 700;
+    font-style: normal;
+    margin: 0 6px
+  }
+}
+
+.zebra-table tr:nth-child(odd):not(:hover){
+  background: #333;
+}
+
+

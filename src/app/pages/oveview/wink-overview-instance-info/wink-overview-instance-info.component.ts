@@ -12,26 +12,47 @@ export class WinkOverviewInstanceInfoComponent implements OnInit {
   quitInstanceNum = 0;
   allInstanceNum = this.runningInstanceNum + this.pausedInstanceNum + this.quitInstanceNum;
 
+  // 作业运行情况
+
+  delay = 0;
+  startOffset = '2018-05-20 00:00';
+  gmtLastOperation = '2018-05-20 00:00';
+  resourceSlot = 1;
+
+
   dataSet = [
     {
-      key    : '1',
-      name   : 'John Brown',
-      age    : 32,
-      address: 'New York No. 1 Lake Park'
+      name: 'test1',
+      delay: 0,
+      startOffset: '2018-05-20 00:00',
+      gmtLastOperation: '2018-05-20 00:00',
+      resourceSlot: 1
     },
+
+
     {
-      key    : '2',
-      name   : 'Jim Green',
-      age    : 42,
-      address: 'London No. 1 Lake Park'
+      name: 'test2',
+      delay: 0,
+      startOffset: '2018-05-20 00:00',
+      gmtLastOperation: '2018-05-20 00:00',
+      resourceSlot: 1
     },
+
     {
-      key    : '3',
-      name   : 'Joe Black',
-      age    : 32,
-      address: 'Sidney No. 1 Lake Park'
+      name: 'test3',
+      delay: 0,
+      startOffset: '2018-05-20 00:00',
+      gmtLastOperation: '2018-05-20 00:00',
+      resourceSlot: 1
     }
   ];
+
+
+  // sort(sort: { key: string, value: string }): void {
+  //   this.sortName = sort.key;
+  //   this.sortValue = sort.value;
+  //   this.search();
+  // }
 
   constructor() {
   }
