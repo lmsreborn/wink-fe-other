@@ -1,3 +1,113 @@
-<p>
-  wink-operate-instance-list works!
-</p>
+<nz-card [nzTitle]="titleTemplate"
+  [nzBordered]="false"
+  [nzExtra]="extraTemplate">
+  <ng-template #titleTemplate>
+    作业列表
+    <span class="subtitle">
+
+      <!--运行-->
+      运行
+      <em>{{runningInstanceNum}}</em>
+
+      <!--分隔符: 中文逗号 + 空格-->
+      ，暂停
+
+      <em>{{pausedInstanceNum}}</em>
+      ，停止
+
+      <em>{{quitInstanceNum}}</em>
+      ，共
+      <em>{{allInstanceNum}}</em>
+      作业
+
+
+    </span>
+
+  </ng-template>
+
+  <ng-template #extraTemplate>
+    <span class="subtitle">
+
+      <!--运行-->
+      运行
+      <em>{{runningInstanceNum}}</em>
+
+      <!--分隔符: 中文逗号 + 空格-->
+      ，暂停
+
+      <em>{{pausedInstanceNum}}</em>
+      ，停止
+
+      <em>{{quitInstanceNum}}</em>
+      ，共
+      <em>{{allInstanceNum}}</em>
+      作业
+
+
+    </span>
+  </ng-template>
+
+  <nz-table #instanceListTable [nzData]="instanceListData" [nzSize]="'small'" [nzBordered]="false" class="highlight-th">
+    <thead nzSingleSort>
+    <tr>
+      <th class="card-th">作业名称</th>
+
+      <th nzShowSort
+          nzShowFilter
+          [nzFilterMultiple]="false" [nzFilters]="addressList" (nzFilterChange)="filter(listOfSearchName,$event)">
+
+        运行状态
+
+      </th>
+      <th nzShowSort nzSortKey="delay">业务延时</th>
+      <th nzShowSort nzSortKey="resourceSlot">资源消耗</th>
+      <th nzShowSort nzSortKey="startOffset">启动位点</th>
+      <th nzShowSort nzSortKey="gmtOperator">最近操作人</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr *ngFor="let instance of instanceListTable.data" class="test1">
+      <td class="card-th">
+        <!--<nz-badge [nzStatus]=barStatus [nzText]="'运行'"></nz-badge>-->
+        <app-wink-instance-status-bar></app-wink-instance-status-bar>
+      </td>
+      <td><a href="_blank">{{instance.name}}</a></td>
+      <td>{{instance.delay}} s</td>
+      <td>{{instance.startOffset}}</td>
+      <td>{{instance.gmtOperator}}</td>
+      <td>{{instance.resourceSlot}} CU</td>
+    </tr>
+    </tbody>
+  </nz-table>
+  <!--<nz-table #instanceInfoTable [nzData]="dataSet" [nzSize]="'small'" [nzBordered]="false" class="zebra-table">-->
+    <!--<thead nzSingleSort>-->
+    <!--<tr>-->
+      <!--<th class="card-th">运行状态</th>-->
+      <!--<th>名称</th>-->
+      <!--<th nzShowSort nzSortKey="delay">业务延时</th>-->
+      <!--<th nzShowSort nzSortKey="startOffset">启动位点</th>-->
+      <!--<th nzShowSort nzSortKey="gmtOperated">最近操作时间</th>-->
+      <!--<th nzShowSort nzSortKey="resourceSlot">资源消耗</th>-->
+    <!--</tr>-->
+    <!--</thead>-->
+
+    <!--<tbody>-->
+    <!--<tr *ngFor="let instance of instanceInfoTable.data" class="test1">-->
+      <!--<td class="card-th">-->
+        <!--&lt;!&ndash;<nz-badge [nzStatus]=barStatus [nzText]="'运行'"></nz-badge>&ndash;&gt;-->
+        <!--<app-wink-instance-status-bar></app-wink-instance-status-bar>-->
+      <!--</td>-->
+      <!--<td><a href="_blank">{{instance.name}}</a></td>-->
+      <!--<td>{{instance.delay}} s</td>-->
+      <!--<td>{{instance.startOffset}}</td>-->
+      <!--<td>{{instance.gmtLastOperation}}</td>-->
+      <!--<td>{{instance.resourceSlot}} CU</td>-->
+    <!--</tr>-->
+    <!--</tbody>-->
+  <!--</nz-table>-->
+
+
+</nz-card>
+
+

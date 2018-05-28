@@ -40,6 +40,7 @@ import { WinkOperateInstanceListComponent } from './pages/operate/wink-operate-i
 const appRoutes: Routes = [
   {path: 'overview', component: WinkOverviewRootContainerComponent},
   {path: 'develop', component: WinkDevelopRootContainerComponent},
+  {path: 'operate', component: WinkOperateRootContainerComponent},
   {
     path: '',
     redirectTo: '/overview',
