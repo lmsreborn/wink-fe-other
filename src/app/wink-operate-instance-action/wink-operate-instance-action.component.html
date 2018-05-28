@@ -1,0 +1,14 @@
+<nz-popconfirm [nzTitle]="'你确定要暂停该作业吗？'"
+               (nzOnConfirm)="pauseConfirm()"
+               (nzOnCancel)="pauseCancel()"
+               [nzPlacement]="'left'">
+  <a nz-popconfirm>暂停</a>
+</nz-popconfirm>
+
+<nz-divider nzType="vertical"></nz-divider>
+
+<nz-popconfirm [nzTitle]="'你确定要停止该作业吗？'"
+               (nzOnConfirm)="stopConfirm()"
+               (nzOnCancel)="pauseCancel()">
+  <a nz-popconfirm>停止</a>
+</nz-popconfirm>
