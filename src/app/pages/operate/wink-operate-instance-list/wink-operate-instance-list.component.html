@@ -26,88 +26,66 @@
   </ng-template>
 
   <ng-template #extraTemplate>
-    <span class="subtitle">
+    <div class="top-operate">
+      <nz-input-group nzSearch [nzSuffix]="suffixIconButton">
+        <input type="text" nz-input placeholder="搜索作业名称...">
+      </nz-input-group>
 
-      <!--运行-->
-      运行
-      <em>{{runningInstanceNum}}</em>
-
-      <!--分隔符: 中文逗号 + 空格-->
-      ，暂停
-
-      <em>{{pausedInstanceNum}}</em>
-      ，停止
-
-      <em>{{quitInstanceNum}}</em>
-      ，共
-      <em>{{allInstanceNum}}</em>
-      作业
-
-
-    </span>
+      <button nz-button nzType="primary">
+        <span>开始批量操作</span>
+      </button>
+    </div>
+    <ng-template #suffixIconButton>
+      <button nz-button nzType="primary" nzSearch><i class="anticon anticon-search"></i></button>
+    </ng-template>
   </ng-template>
 
-  <nz-table #instanceListTable [nzData]="instanceListData" [nzSize]="'small'" [nzBordered]="false" class="highlight-th">
+  <nz-table #instanceListTable
+            [nzData]="instanceListData"
+            [nzSize]="'small'"
+            [nzBordered]="false"
+            [nzShowSizeChanger]="true"
+            [nzScroll]="{y: 'calc(100vh - 202px)'}"
+            class="card-table highlight-th">
     <thead nzSingleSort>
     <tr>
-      <th class="card-th">作业名称</th>
+      <th class="card-th" nzWidth="280px">作业名称</th>
 
-      <th nzShowSort
-          nzShowFilter
-          [nzFilterMultiple]="false" [nzFilters]="addressList" (nzFilterChange)="filter(listOfSearchName,$event)">
+      <th nzShowFilter
+          [nzFilterMultiple]="false"
+          [nzFilters]="statusList"
+          (nzFilterChange)="filter(listOfSearchName,$event)"
+          nzWidth="120px">
 
         运行状态
 
       </th>
-      <th nzShowSort nzSortKey="delay">业务延时</th>
-      <th nzShowSort nzSortKey="resourceSlot">资源消耗</th>
-      <th nzShowSort nzSortKey="startOffset">启动位点</th>
-      <th nzShowSort nzSortKey="gmtOperator">最近操作人</th>
+      <th nzShowSort nzSortKey="delay" nzWidth="120px">业务延时</th>
+      <th nzShowSort nzSortKey="resourceSlot" nzWidth="120px">资源消耗</th>
+      <th nzShowSort nzSortKey="startOffset" nzWidth="150px">启动位点</th>
+      <th nzShowSort nzSortKey="gmtOperator" nzWidth="120px">最近操作人</th>
+      <th nzWidth="150px">操作</th>
     </tr>
     </thead>
 
     <tbody>
     <tr *ngFor="let instance of instanceListTable.data" class="test1">
-      <td class="card-th">
-        <!--<nz-badge [nzStatus]=barStatus [nzText]="'运行'"></nz-badge>-->
+      <td class="instance-name-td isfull card-td"><a href="_blank">{{instance.name}}</a></td>
+      <td>
         <app-wink-instance-status-bar></app-wink-instance-status-bar>
       </td>
-      <td><a href="_blank">{{instance.name}}</a></td>
       <td>{{instance.delay}} s</td>
+      <td>{{instance.resourceSlot}} CU</td>
       <td>{{instance.startOffset}}</td>
       <td>{{instance.gmtOperator}}</td>
-      <td>{{instance.resourceSlot}} CU</td>
+      <td>
+        <app-wink-operate-instance-action></app-wink-operate-instance-action>
+      </td>
     </tr>
+
+
     </tbody>
   </nz-table>
-  <!--<nz-table #instanceInfoTable [nzData]="dataSet" [nzSize]="'small'" [nzBordered]="false" class="zebra-table">-->
-    <!--<thead nzSingleSort>-->
-    <!--<tr>-->
-      <!--<th class="card-th">运行状态</th>-->
-      <!--<th>名称</th>-->
-      <!--<th nzShowSort nzSortKey="delay">业务延时</th>-->
-      <!--<th nzShowSort nzSortKey="startOffset">启动位点</th>-->
-      <!--<th nzShowSort nzSortKey="gmtOperated">最近操作时间</th>-->
-      <!--<th nzShowSort nzSortKey="resourceSlot">资源消耗</th>-->
-    <!--</tr>-->
-    <!--</thead>-->
-
-    <!--<tbody>-->
-    <!--<tr *ngFor="let instance of instanceInfoTable.data" class="test1">-->
-      <!--<td class="card-th">-->
-        <!--&lt;!&ndash;<nz-badge [nzStatus]=barStatus [nzText]="'运行'"></nz-badge>&ndash;&gt;-->
-        <!--<app-wink-instance-status-bar></app-wink-instance-status-bar>-->
-      <!--</td>-->
-      <!--<td><a href="_blank">{{instance.name}}</a></td>-->
-      <!--<td>{{instance.delay}} s</td>-->
-      <!--<td>{{instance.startOffset}}</td>-->
-      <!--<td>{{instance.gmtLastOperation}}</td>-->
-      <!--<td>{{instance.resourceSlot}} CU</td>-->
-    <!--</tr>-->
-    <!--</tbody>-->
-  <!--</nz-table>-->
-
-
 </nz-card>
 
 

@@ -30,3 +30,9 @@
 
 8. @link-hover-color       : @text-color;
    @link-active-color      : @text-color;
+   
+9. @btn-default-bg         : #333;
+10. @border-color-base     : #303030;
+11. @input-bg              : #333;
+12. @popover-bg: #404040;
+13  @background-color-light : #505050;

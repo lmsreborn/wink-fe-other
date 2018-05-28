@@ -34,6 +34,7 @@ import { WinkOverviewUpgradeInfoComponent } from './pages/oveview/wink-overview-
 import { WinkOverviewUserGuideComponent } from './pages/oveview/wink-overview-user-guide/wink-overview-user-guide.component';
 import { WinkOperateRootContainerComponent } from './pages/operate/wink-operate-root-container/wink-operate-root-container.component';
 import { WinkOperateInstanceListComponent } from './pages/operate/wink-operate-instance-list/wink-operate-instance-list.component';
+import { WinkOperateInstanceActionComponent } from './wink-operate-instance-action/wink-operate-instance-action.component';
 
 
 // TODO: 分离，添加router module
@@ -79,6 +80,7 @@ const appRoutes: Routes = [
     WinkOverviewUserGuideComponent,
     WinkOperateRootContainerComponent,
     WinkOperateInstanceListComponent,
+    WinkOperateInstanceActionComponent,
   ],
   imports: [
     BrowserModule,

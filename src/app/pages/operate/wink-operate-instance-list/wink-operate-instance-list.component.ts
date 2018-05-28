@@ -47,6 +47,16 @@ export class WinkOperateInstanceListComponent implements OnInit {
     }
   ];
 
+  // TODO: 暂停中，停止中，都是蓝色
+  statusList = [
+    {text: '报错', value: 'error'},
+    {text: '未启动', value: 'default'},
+    {text: '等待', value: 'warning'},
+    {text: '运行', value: 'success'},
+    {text: '暂停', value: 'default'},
+    {text: '停止', value: 'default'},
+  ];
+
   constructor() { }
 
   ngOnInit() {
