@@ -1,0 +1,94 @@
+:host{
+  display: block;
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.svg-container{
+  display: block;
+  position: relative;
+  height: 100%;
+  width: 100%;
+
+  .svg-inner{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    .background{
+      cursor: move;
+    }
+
+    #arrow path{
+      fill: rgba(255,255,255,.65);
+      fill-opacity: .5;
+    }
+
+
+    .wrapper{
+      float: left;
+      cursor: pointer;
+      width: 100%;
+
+      .inner{
+        width: 100%;
+        border: 2px solid rgba(255,255,255,.5);
+
+
+        //TODO: border 转向 border: 2px solid #52c41a;
+        overflow: hidden;
+        background: #404040;
+        color: rgba(255,255,255,.85);
+
+        .type{
+          display: block;
+          word-wrap: break-word;
+          padding: 1px 5px;
+          line-height: 1.42857143;
+          margin: 0;
+          text-align: left;
+          white-space: pre-wrap;
+          background-color: transparent;
+          border: none;
+          border-radius: 0;
+          word-break: break-word;
+          border-bottom: 1px solid rgba(255,255,255,.1);
+          width: 100%;
+          font-size: 12px;
+
+          &.success{
+            color: #52c41a;
+            font-weight: 700
+          }
+
+
+          .key{
+            font-weight: 700;
+            display: inline-block;
+            min-width: 70px;
+          }
+
+          .view{
+            float: right;
+            margin-right: 5px;
+            margin-top: 0;
+            display: none;
+
+            //TODO: display转向 display:inline
+
+
+            color: #52c41a;
+            -webkit-transition: all .5s ease;
+            transition: all .5s ease;
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+
+  svg:not(:root){
+    overflow: hidden;
+  }
+}

@@ -39,7 +39,8 @@ import { WinkOperateInstanceDetailComponent } from './pages/operate/wink-operate
 import { WinkOperateInstanceListTestComponent } from './pages/operate/wink-operate-instance-list-test/wink-operate-instance-list-test.component';
 import { WinkOperateInstanceHeaderComponent } from './pages/operate/wink-operate-instance-header/wink-operate-instance-header.component';
 import { WinkOperateInstanceDashboardComponent } from './pages/operate/wink-operate-instance-dashboard/wink-operate-instance-dashboard.component';
-import { WinkDagreComponent } from './wink-dagre/wink-dagre.component';
+import { WinkDagreComponent } from './pages/operate/wink-dagre/wink-dagre.component';
+import { WinkSvgContainerComponent } from './pages/operate/wink-svg-container/wink-svg-container.component';
 
 
 // TODO: 分离，添加router module
@@ -89,8 +90,9 @@ const appRoutes: Routes = [
     WinkOperateInstanceDetailComponent,
     WinkOperateInstanceListTestComponent,
     WinkOperateInstanceHeaderComponent,
-    WinkOperateInstanceDashboar,
-    WinkDagreComponentdComponent,
+    WinkOperateInstanceDashboardComponent,
+    WinkDagreComponent,
+    WinkSvgContainerComponent,
   ],
   imports: [
     BrowserModule,

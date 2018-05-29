@@ -36,3 +36,4 @@
 11. @input-bg              : #333;
 12. @popover-bg: #404040;
 13  @background-color-light : #505050;
+14  @slider-rail-background-color:        #505050;
