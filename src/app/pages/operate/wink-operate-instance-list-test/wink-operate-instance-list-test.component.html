@@ -1,0 +1,95 @@
+<nz-card [nzTitle]="titleTemplate"
+         [nzBordered]="false"
+         [nzExtra]="extraTemplate">
+  <ng-template #titleTemplate>
+    作业列表
+    <!--<span class="subtitle">-->
+
+      <!--&lt;!&ndash;运行&ndash;&gt;-->
+      <!--运行-->
+      <!--<em>{{runningInstanceNum}}</em>-->
+
+      <!--&lt;!&ndash;分隔符: 中文逗号 + 空格&ndash;&gt;-->
+      <!--，暂停-->
+
+      <!--<em>{{pausedInstanceNum}}</em>-->
+      <!--，停止-->
+
+      <!--<em>{{quitInstanceNum}}</em>-->
+      <!--，共-->
+      <!--<em>{{allInstanceNum}}</em>-->
+      <!--作业-->
+
+
+    <!--</span>-->
+
+  </ng-template>
+
+  <ng-template #extraTemplate>
+    <div class="top-operate">
+      <nz-input-group nzSearch [nzSuffix]="suffixIconButton" class="side">
+        <input type="text" nz-input placeholder="搜索作业名称...">
+      </nz-input-group>
+
+      <!--<button nz-button nzType="primary">-->
+        <!--<span>开始批量操作</span>-->
+      <!--</button>-->
+    </div>
+    <ng-template #suffixIconButton>
+      <button nz-button nzType="primary" nzSearch><i class="anticon anticon-search"></i></button>
+    </ng-template>
+  </ng-template>
+
+  <nz-table #instanceListTable
+            [nzData]="instanceListData"
+            [nzSize]="'small'"
+            [nzBordered]="false"
+            [nzShowSizeChanger]="true"
+            [nzScroll]="{y: 'calc(100vh - 202px)'}"
+            class="card-table highlight-th">
+    <thead nzSingleSort>
+    <tr>
+      <th class="card-th">作业名称</th>
+
+      <th nzShowFilter
+          [nzFilterMultiple]="false"
+          [nzFilters]="statusList"
+          (nzFilterChange)="filter(listOfSearchName,$event)"
+          nzWidth="120px"
+          style="padding-left: 12px!important;">
+
+        运行状态
+
+      </th>
+      <!--<th nzShowSort nzSortKey="delay" nzWidth="120px" style="padding-left: 0px!important;">业务延时</th>-->
+      <!--<th nzShowSort nzSortKey="resourceSlot" nzWidth="100px">资源消耗</th>-->
+      <!--<th nzShowSort nzSortKey="startOffset" nzWidth="150px" style="padding-left: 24px!important;">启动位点</th>-->
+      <!--<th nzShowSort nzSortKey="gmtOperator" nzWidth="120px" style="padding-left: 12px!important;">最近操作人</th>-->
+      <!--<th nzWidth="150px" style="padding-left: 36px!important;">操作</th>-->
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr *ngFor="let instance of instanceListTable.data">
+      <td class="instance-name-td isfull card-td">
+        <a href="_blank" class="bold instance-name ellipsis" nz-tooltip="test1">
+          <span nz-tooltip class="fill-width">{{instance.name}}</span>
+        </a>
+
+      </td>
+      <td>
+        <app-wink-instance-status-bar></app-wink-instance-status-bar>
+      </td>
+      <!--<td>{{instance.delay}} s</td>-->
+      <!--<td>{{instance.resourceSlot}} CU</td>-->
+      <!--<td>{{instance.startOffset}}</td>-->
+      <!--<td>{{instance.gmtOperator}}</td>-->
+      <!--<td>-->
+        <!--<app-wink-operate-instance-action></app-wink-operate-instance-action>-->
+      <!--</td>-->
+    </tr>
+
+
+    </tbody>
+  </nz-table>
+</nz-card>

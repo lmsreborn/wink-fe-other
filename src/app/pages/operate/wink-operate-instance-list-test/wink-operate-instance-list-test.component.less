@@ -1,0 +1,128 @@
+:host{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 15;
+
+  //TODO: test新添加的
+
+  width: 340px;
+  transition: width cubic-bezier(.08,.82,.17,1) .5s;
+  border-right: 1px solid #303030;
+}
+
+nz-card {
+  & ::ng-deep .ant-card-body {
+    height: ~"calc(100vh - 164px)";
+    position: relative;
+    padding: 0;
+
+    .ant-table.ant-table-small{
+      //.ant-table-header{
+      //  margin-bottom: -12px;
+      //  padding-bottom: 0px;
+      //}
+
+
+      .card-th{
+        padding-left: 24px!important;
+        width: 240px;
+        max-width: 240px;
+        position: relative;
+      }
+
+      .card-td {
+        padding-left:24px!important;
+        //text-align: center;
+        width: 300px;
+        max-width: 300px;
+        position: relative;
+      }
+
+      .instance-name{
+        display: inline-block;
+        width: ~"calc(100% - 32px)";
+      }
+
+      .ellipsis{
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+
+      .bold{
+        font-weight: 500;
+      }
+
+      .instance-name-td{
+        width: 300px;
+        max-width: 300px;
+        position: relative;
+      }
+
+
+      .ant-table-header{
+        //height: ;
+        margin-bottom: 0px;
+        padding-bottom: 0;
+      }
+
+      .fill-width{
+        max-width: 100%;
+        display: inline-block;
+      }
+    }
+  }
+
+  & ::ng-deep .ant-table-scroll{
+    height: ~"calc(100vh - 164px)";
+  }
+}
+
+.highlight-th th{
+  border-radius: 0!important;
+  background: #505050!important;
+
+}
+
+
+.subtitle{
+  color: rgba(255,255,255,.85);
+  margin-left: 17px;
+  font-size: 14px;
+  line-height: 16px;
+
+  em {
+    color: #1890ff;
+    font-weight: 700;
+    font-style: normal;
+    margin: 0 6px
+  }
+}
+
+.top-operate{
+  position: absolute;
+  right: 17.5px;
+  top: 13px;
+
+  nz-input-group.side{
+    width: 160px;
+  }
+  button{
+    margin-left: 8px;
+  }
+}
+
+.card-table ::ng-deep .ant-table{
+  border-radius: 0;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  margin-top: 1px;
+}
+
+
+
+//.card-table tr:nth-child(odd):not(:hover){
+//  background: #333;
+//}
