@@ -8,19 +8,43 @@
 
 nz-card {
   & ::ng-deep .ant-card-body {
+    height: ~"calc(100vh - 164px)";
+    position: relative;
     padding: 0;
 
     .ant-table.ant-table-small{
-      margin-top: 1px;
+      //.ant-table-header{
+      //  margin-bottom: -12px;
+      //  padding-bottom: 0px;
+      //}
 
-      .card-th, .card-td {
-        padding-left: 24px!important;
+
+      .card-th{
+        padding-left: 64px!important;
+        width: 292px;
+        max-width: 292px;
+        position: relative;
+      }
+
+      .card-td {
+        padding-left:72px!important;
+        //text-align: center;
+        width: 120px;
+        max-width: 120px;
+        position: relative;
       }
 
       .instance-name-td{
         width: 300px;
         max-width: 300px;
         position: relative;
+      }
+
+
+      .ant-table-header{
+        //height: ;
+        margin-bottom: 0px;
+        padding-bottom: 0;
       }
     }
   }
@@ -33,6 +57,7 @@ nz-card {
 .highlight-th th{
   border-radius: 0!important;
   background: #505050!important;
+
 }
 
 
@@ -72,3 +97,7 @@ nz-card {
 }
 
 
+
+//.card-table tr:nth-child(odd):not(:hover){
+//  background: #333;
+//}

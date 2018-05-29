@@ -49,22 +49,23 @@
             class="card-table highlight-th">
     <thead nzSingleSort>
     <tr>
-      <th class="card-th" nzWidth="280px">作业名称</th>
+      <th class="card-th">作业名称</th>
 
       <th nzShowFilter
           [nzFilterMultiple]="false"
           [nzFilters]="statusList"
           (nzFilterChange)="filter(listOfSearchName,$event)"
-          nzWidth="120px">
+          nzWidth="96px"
+          style="padding-left: 12px!important;">
 
         运行状态
 
       </th>
-      <th nzShowSort nzSortKey="delay" nzWidth="120px">业务延时</th>
-      <th nzShowSort nzSortKey="resourceSlot" nzWidth="120px">资源消耗</th>
-      <th nzShowSort nzSortKey="startOffset" nzWidth="150px">启动位点</th>
-      <th nzShowSort nzSortKey="gmtOperator" nzWidth="120px">最近操作人</th>
-      <th nzWidth="150px">操作</th>
+      <th nzShowSort nzSortKey="delay" nzWidth="120px" style="padding-left: 0px!important;">业务延时</th>
+      <th nzShowSort nzSortKey="resourceSlot" nzWidth="100px">资源消耗</th>
+      <th nzShowSort nzSortKey="startOffset" nzWidth="150px" style="padding-left: 24px!important;">启动位点</th>
+      <th nzShowSort nzSortKey="gmtOperator" nzWidth="120px" style="padding-left: 12px!important;">最近操作人</th>
+      <th nzWidth="150px" style="padding-left: 36px!important;">操作</th>
     </tr>
     </thead>
 
