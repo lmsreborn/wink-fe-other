@@ -1,0 +1,70 @@
+:host {
+  height: 95px;
+  display: block;
+}
+
+.title {
+  font-size: 14px;
+  padding: 16px 12px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  color: rgba(255, 255, 255, .65);
+  font-weight: 500;
+  width: 100%;
+  height: 57px;
+  display: block;
+  background: #404040;
+  border-bottom: 1px solid #303030;
+}
+
+nz-breadcrumb{
+  display: inline-block;
+}
+
+:host ::ng-deep nz-breadcrumb-item {
+
+  .anticon {
+    font-size: 14px;
+  }
+
+
+  i {
+    margin-right: 8px;
+    font-size: 14px;
+  }
+
+  .strong{
+    color: rgba(255,255,255,.65);
+    max-width: 320px;
+    display: inline-block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    vertical-align: bottom;
+    overflow: hidden;
+  }
+
+}
+
+
+app-wink-instance-status-bar{
+  margin: 0 6px;
+}
+
+app-wink-operate-instance-action{
+  position: absolute;
+  right: 24px;
+}
+
+:host ::ng-deep .ant-tabs-nav-container{
+  border-bottom: 1px solid #303030;
+  background: #505050;
+  height: 38px;
+}
+
+:host ::ng-deep .ant-tabs-small .ant-tabs-tab{
+  padding: 8px 16px 9px;
+  color: rgba(255,255,255,.85);
+  font-weight: 500;
+  margin-right: 6px;
+}

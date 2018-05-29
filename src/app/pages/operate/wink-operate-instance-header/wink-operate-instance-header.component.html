@@ -1,0 +1,40 @@
+<div class="title">
+  <nz-breadcrumb>
+    <nz-breadcrumb-item>
+      <a [routerLink]="['../']">
+        <i class="anticon anticon-home">
+        </i>
+        作业运维
+      </a>
+    </nz-breadcrumb-item>
+    <nz-breadcrumb-item>
+      <a class="strong running">Application List</a>
+    </nz-breadcrumb-item>
+  </nz-breadcrumb>
+
+  <nz-divider nzType="vertical"></nz-divider>
+  <app-wink-instance-status-bar></app-wink-instance-status-bar>
+  <span>
+    <nz-divider nzType="vertical"></nz-divider>
+        启动位点：2018-05-20 12:11
+  </span>
+
+  <span>
+    <nz-divider nzType="vertical"></nz-divider>
+      业务延时：0 s
+  </span>
+
+  <app-wink-operate-instance-action></app-wink-operate-instance-action>
+</div>
+
+<nz-tabset [nzSize]="'small'" [nzTabPosition]="'top'" [nzType]="'line'">
+  <nz-tab nzTitle="运行信息"></nz-tab>
+  <nz-tab nzTitle="数据曲线"></nz-tab>
+  <nz-tab nzTitle="FailOver"></nz-tab>
+  <nz-tab nzTitle="CheckPoints"></nz-tab>
+  <nz-tab nzTitle="JobManager"></nz-tab>
+  <nz-tab nzTitle="TaskExecutor"></nz-tab>
+  <nz-tab nzTitle="血缘关系"></nz-tab>
+  <nz-tab nzTitle="属性参数"></nz-tab>
+
+</nz-tabset>
