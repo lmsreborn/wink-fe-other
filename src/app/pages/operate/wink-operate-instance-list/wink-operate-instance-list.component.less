@@ -34,6 +34,21 @@ nz-card {
         position: relative;
       }
 
+      .instance-name{
+        display: inline-block;
+        width: ~"calc(100% - 32px)";
+      }
+
+      .ellipsis{
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+
+      .bold{
+        font-weight: 500;
+      }
+
       .instance-name-td{
         width: 300px;
         max-width: 300px;
@@ -45,6 +60,11 @@ nz-card {
         //height: ;
         margin-bottom: 0px;
         padding-bottom: 0;
+      }
+
+      .fill-width{
+        max-width: 100%;
+        display: inline-block;
       }
     }
   }

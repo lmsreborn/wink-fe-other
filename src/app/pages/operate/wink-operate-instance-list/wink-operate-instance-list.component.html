@@ -1,6 +1,6 @@
 <nz-card [nzTitle]="titleTemplate"
-  [nzBordered]="false"
-  [nzExtra]="extraTemplate">
+         [nzBordered]="false"
+         [nzExtra]="extraTemplate">
   <ng-template #titleTemplate>
     作业列表
     <span class="subtitle">
@@ -70,8 +70,13 @@
     </thead>
 
     <tbody>
-    <tr *ngFor="let instance of instanceListTable.data" class="test1">
-      <td class="instance-name-td isfull card-td"><a href="_blank">{{instance.name}}</a></td>
+    <tr *ngFor="let instance of instanceListTable.data">
+      <td class="instance-name-td isfull card-td">
+          <a href="_blank" class="bold instance-name ellipsis" nz-tooltip="test1">
+            <span nz-tooltip class="fill-width">{{instance.name}}</span>
+          </a>
+
+      </td>
       <td>
         <app-wink-instance-status-bar></app-wink-instance-status-bar>
       </td>
