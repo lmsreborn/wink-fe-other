@@ -12,7 +12,7 @@ import {WinkRootLayoutComponent} from './wink-root-layout/wink-root-layout.compo
 import {WinkIdeLeftPanelComponent} from './pages/develop/wink-ide-left-panel/wink-ide-left-panel.component';
 import {WinkFolderTreeComponent} from './pages/develop/wink-folder-tree/wink-folder-tree.component';
 import {WinkIdeTopMenuComponent} from './pages/develop/wink-ide-top-menu/wink-ide-top-menu.component';
-import {WinkResizeOpbarComponent} from './pages/develop/wink-resize-opbar/wink-resize-opbar.component';
+import {WinkResizeOpbarComponent} from './wink-resize-opbar/wink-resize-opbar.component';
 import {WinkIdeRightPanelComponent} from './pages/develop/wink-ide-right-panel/wink-ide-right-panel.component';
 import {WinkIdePreviewPanelComponent} from './pages/develop/wink-ide-preview-panel/wink-ide-preview-panel.component';
 import {WinkIdeCodeEditorComponent} from './pages/develop/wink-ide-code-editor/wink-ide-code-editor.component';
@@ -35,12 +35,17 @@ import { WinkOverviewUserGuideComponent } from './pages/oveview/wink-overview-us
 import { WinkOperateRootContainerComponent } from './pages/operate/wink-operate-root-container/wink-operate-root-container.component';
 import { WinkOperateInstanceListComponent } from './pages/operate/wink-operate-instance-list/wink-operate-instance-list.component';
 import { WinkOperateInstanceActionComponent } from './wink-operate-instance-action/wink-operate-instance-action.component';
+import { WinkOperateInstanceDetailComponent } from './pages/operate/wink-operate-instance-detail/wink-operate-instance-detail.component';
+import { WinkOperateInstanceListTestComponent } from './pages/operate/wink-operate-instance-list-test/wink-operate-instance-list-test.component';
+import { WinkOperateInstanceHeaderComponent } from './pages/operate/wink-operate-instance-header/wink-operate-instance-header.component';
+import { WinkOperateInstanceDashboardComponent } from './pages/operate/wink-operate-instance-dashboard/wink-operate-instance-dashboard.component';
+import { WinkDagreComponent } from './wink-dagre/wink-dagre.component';
 
 
 // TODO: 分离，添加router module
 const appRoutes: Routes = [
-  {path: 'overview', component: WinkOverviewRootContainerComponent},
-  {path: 'develop', component: WinkDevelopRootContainerComponent},
+  {path: 'overview', component: WinkOperateRootContainerComponent},
+  {path: 'develop', component: WinkOperateRootContainerComponent},
   {path: 'operate', component: WinkOperateRootContainerComponent},
   {
     path: '',
@@ -81,6 +86,11 @@ const appRoutes: Routes = [
     WinkOperateRootContainerComponent,
     WinkOperateInstanceListComponent,
     WinkOperateInstanceActionComponent,
+    WinkOperateInstanceDetailComponent,
+    WinkOperateInstanceListTestComponent,
+    WinkOperateInstanceHeaderComponent,
+    WinkOperateInstanceDashboar,
+    WinkDagreComponentdComponent,
   ],
   imports: [
     BrowserModule,
