@@ -4,7 +4,7 @@ import {NgModule} from '@angular/core';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 // import {NgZorroAntdModule} from './shared/ng-zorro-antd.module';
-import { NgZorroAntdModule } from 'ng-zorro-antd';
+import {NgZorroAntdModule, zh_CN} from 'ng-zorro-antd';
 import {AppComponent} from './app.component';
 import {LoginFormComponent} from './login-form/login-form.component';
 import {WinkHeaderComponent} from './wink-header/wink-header.component';
@@ -42,13 +42,13 @@ import { WinkOperateInstanceDashboardComponent } from './pages/operate/wink-oper
 import { WinkDagreComponent } from './pages/operate/wink-dagre/wink-dagre.component';
 import { WinkSvgContainerComponent } from './pages/operate/wink-svg-container/wink-svg-container.component';
 import { WinkOperateInstanceCurveComponent } from './pages/operate/wink-operate-instance-curve/wink-operate-instance-curve.component';
-import { WinkDatepickerComponent } from './wink-datepicker/wink-datepicker.component';
 import { WinkCollapseComponent } from './wink-collapse/wink-collapse.component';
+import { NZ_I18N, en_US } from 'ng-zorro-antd';
 
 
 // TODO: 分离，添加router module
 const appRoutes: Routes = [
-  {path: 'overview', component: WinkOperateRootContainerComponent},
+  {path: 'overview', component: WinkOverviewRootContainerComponent},
   {path: 'develop', component: WinkOperateRootContainerComponent},
   {path: 'operate', component: WinkOperateRootContainerComponent},
   {
@@ -97,7 +97,6 @@ const appRoutes: Routes = [
     WinkDagreComponent,
     WinkSvgContainerComponent,
     WinkOperateInstanceCurveComponent,
-    WinkDatepickerComponent,
     WinkCollapseComponent,
   ],
   imports: [
@@ -117,6 +116,7 @@ const appRoutes: Routes = [
     )
   ],
   bootstrap: [AppComponent],
+  // providers   : [ { provide: NZ_I18N, useValue: zh_CN } ]
   // providers: [NzMeasureScrollbarService]
 })
 export class AppModule {

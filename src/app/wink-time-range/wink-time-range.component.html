@@ -1,4 +1,4 @@
-<nz-radio-group class="time-range" [(ngModel)]="timeValue">
+<nz-radio-group class="time-range" [(ngModel)]="timeValue" [nzSize]="small">
   <label nz-radio-button nzValue="tenMinutes">最近十分钟</label>
   <label nz-radio-button nzValue="oneHours">最近一小时</label>
   <label nz-radio-button nzValue="sixHours">最近6小时</label>
@@ -9,6 +9,18 @@
 
 <div class="range-picker">
   <!--<app-wink-datepicker [placeholderName]="'起始时间'"></app-wink-datepicker>-->
-  <!--<span>-</span>-->
-  <!--<app-wink-datepicker [placeholderName]="'结束时间'"></app-wink-datepicker>-->
+
+  <nz-date-picker [(ngModel)]="startDate"
+                  (ngModelChange)="onChange($event)"
+                  [nzSize]="'small'"
+                  nzShowTime
+                  [nzPlaceHolder]="'起始时间'">
+  </nz-date-picker>
+  <span>-</span>
+  <nz-date-picker [(ngModel)]="endDate"
+                  (ngModelChange)="onChange($event)"
+                  [nzSize]="'small'"
+                  nzShowTime
+                  [nzPlaceHolder]="'结束时间'">
+  </nz-date-picker>
 </div>

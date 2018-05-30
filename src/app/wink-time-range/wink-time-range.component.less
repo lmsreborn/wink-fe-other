@@ -7,14 +7,17 @@
 
 .time-range ::ng-deep {
 
-  .ant-radio-button-wrapper-checked {
-    font-weight: 700;
-  }
-
   label {
+    border: none;
     background: 0 0;
     padding: 0 12px;
   }
+
+  .ant-radio-button-wrapper-checked {
+    font-weight: 700;
+    box-shadow: none;
+  }
+
 }
 
 :host {
@@ -24,11 +27,20 @@
   -webkit-box-pack: start;
   justify-content: start;
   height: 55px;
-
-  //::ng-deep .time-range {
-  //  border: none;
-  //  background: 0 0;
-  //  padding: 0 12px;
-  //}
 }
+
+.small{
+  height: 42px;
+}
+
+.range-picker{
+  margin-left: 12px;
+}
+
+nz-date-picker{
+  width: 200px;
+  margin: 0 6px;
+}
+
+
 
