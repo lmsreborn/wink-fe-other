@@ -5,22 +5,21 @@
   text-align: left;
   overflow: hidden;
 
-  td{
+  td {
     padding: 6px 12px;
-    color: rgba(255,255,255,.65);
+    color: rgba(255, 255, 255, .65);
     border-right: 1px solid #303030;
     border-bottom: 1px solid #303030;
 
-
-    &.title{
+    &.title {
       font-weight: 500;
-      color: rgba(255,255,255,.85);
+      color: rgba(255, 255, 255, .85);
     }
 
     .color {
       font-weight: 700;
 
-      &.running{
+      &.running {
         color: #52c41a;
       }
     }
@@ -28,27 +27,25 @@
   }
 }
 
-
 .collapse-title {
   line-height: 22px;
   padding: 12px;
-  color: rgba(255,255,255,.85);
+  color: rgba(255, 255, 255, .85);
   position: relative;
   font-weight: 500;
   border-bottom: 1px solid #303030;
 
-
-  i{
+  i {
     font-size: 12px;
     font-weight: 500;
     margin-right: 6px;
 
-    &.arrow{
+    &.arrow {
       margin-right: 12px;
     }
   }
 
-  .operate{
+  .operate {
     float: right;
     user-select: none;
 
@@ -58,18 +55,61 @@
   }
 }
 
-
-.collapse-content{
+.collapse-content {
   background: #404040;
   overflow: hidden;
   position: relative;
 
-  .zoom-slider{
+  .zoom-slider {
     height: 150px;
     display: block;
     z-index: 10;
     position: absolute;
     right: 0;
     top: 10px;
+  }
+}
+
+:host ::ng-deep .ant-table-header {
+  margin-bottom: -12px;
+  padding-bottom: 0px;
+}
+
+.card-table ::ng-deep {
+  .ant-table {
+    border-radius: 0;
+    border: 0;
+    font-size: 12px;
+  }
+}
+
+.card-table.border-top ::ng-deep .ant-table {
+  border-top: 1px solid #303030;
+}
+
+td.name {
+  position: relative;
+  overflow: hidden;
+}
+
+.background {
+  &.RUNNING {
+    background: #52c41a;
+  }
+
+  &.status{
+    display: inline-block;
+    padding: 2px 5px;
+    color: #fff;
+    font-weight: 700;
+  }
+
+  &.task{
+    font-weight: 700;
+    text-align: center;
+    color: #fff;
+    width: 30px;
+    padding: 3px 5px;
+    cursor: default;
   }
 }

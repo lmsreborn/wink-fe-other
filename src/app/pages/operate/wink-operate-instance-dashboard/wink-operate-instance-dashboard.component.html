@@ -81,7 +81,67 @@
 
 
 <div class="table-list">
-  <nz-table [nzSize]="'small'">
+  <nz-table #vertexListTable
+            [nzSize]="'small'"
+            [nzBordered]="false"
+            [nzData]="vertexListData"
+            [nzScroll]="{x:'1450px'}"
+            [nzShowPagination]="false"
+            class="card-table border-top">
+
+
+    <thead nzSingleSort>
+    <tr>
+      <th nzWidth="50px" nzLeft="0px"
+          nzShowSort nzSortKey="test">ID</th>
+      <th nzWidth="200px"
+          nzShowSort nzSortKey="test">Name</th>
+      <th nzWidth="100px"
+          nzShowSort nzSortKey="test">Status</th>
+      <th nzWidth="100px"
+          nzShowSort nzSortKey="test">InQ max</th>
+      <th nzWidth="100px"
+          nzShowSort nzSortKey="test">OutQ max</th>
+      <th nzWidth="120px"
+          nzShowSort nzSortKey="test">RecCnt sum</th>
+      <th nzWidth="120px"
+          nzShowSort nzSortKey="test">SendCnt sum</th>
+      <th nzWidth="120px"
+          nzShowSort nzSortKey="test">TPS sum</th>
+      <th nzWidth="120px"
+          nzShowSort nzSortKey="test">Delay max</th>
+      <th nzWidth="150px"
+          nzShowSort nzSortKey="test">StartTime</th>
+      <th nzWidth="120px"
+          nzShowSort nzSortKey="test">Durations(s)</th>
+      <th nzWidth="100px" nzRight="0px">Task</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr *ngFor="let vertex of vertexListTable.data">
+      <td>
+        <a nz-tooltip="点击在图上定位">{{vertex.ID}}</a>
+      </td>
+      <td class="name">
+        {{vertex.Name}}
+      </td>
+      <td>
+        <span class="background status RUNNING">{{vertex.Status}}</span>
+      </td>
+      <td>{{vertex.InQ_max}}</td>
+      <td>{{vertex.OutQ_max}}</td>
+      <td>{{vertex.RecCnt_sum}}</td>
+      <td>{{vertex.SendCnt_sum}}</td>
+      <td>{{vertex.TPS_sum}}</td>
+      <td>{{vertex.Delay_max}}</td>
+      <td>{{vertex.StartTime}}</td>
+      <td>{{vertex.Duration}}</td>
+      <td>
+        <span class="task background RUNNING" nz-tooltip="状态：RUNNING">3</span>
+      </td>
+    </tr>
+    </tbody>
 
 
   </nz-table>
