@@ -10,7 +10,7 @@ export class WinkOperateInstanceDashboardComponent implements OnInit {
   vertexListData = [
     {
       ID: 0,
-      Name: 'Source: DataHubTableSource-inflame-test1 -> SourceParser:DefaultSourceCollector(DataHubTableSource-inflame-test1) -> from: (f1, f2) -> where: (<(f1, 50)), select: (f1, f2) -> to: Tuple2 -> Sink: TupleOutputFormatAdapterSink:com.al...',
+      Name: 'Source: DataHubTableSource-inflame-test1 -> SourceParser:DefaultSourceCollector(DataHubTableSource-inflame-test1) -> from: (f1, f2) -> where: (<(f1, 50)), select: (f1, f2) -> to: Tuple2 -> Sink: TupleOutputFormatAdapterSink:com.alibaba.blink.streaming.connectors.datahub.sink.DatahubOutputFormat@4f4c789f',
       Status: 'RUNNING',
       InQ_max: '0(0.00%)',
       OutQ_max: '0(0.00%)',

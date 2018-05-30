@@ -1,55 +1,55 @@
 <table class="detail-table">
   <tbody>
-    <tr>
-      <td class="title">Task状态</td>
-      <td colspan="7">
-        <span>创建 ：<span class="color">0</span></span>
-        <nz-divider [nzType]="vertical"></nz-divider>
+  <tr>
+    <td class="title">Task状态</td>
+    <td colspan="7">
+      <span>创建 ：<span class="color">0</span></span>
+      <nz-divider [nzType]="vertical"></nz-divider>
 
-        <span>运行 ：<span class="color running">3</span></span>
-        <nz-divider [nzType]="vertical"></nz-divider>
+      <span>运行 ：<span class="color running">3</span></span>
+      <nz-divider [nzType]="vertical"></nz-divider>
 
-        <span>运行 ：<span class="color">0</span></span>
-        <nz-divider [nzType]="vertical"></nz-divider>
+      <span>运行 ：<span class="color">0</span></span>
+      <nz-divider [nzType]="vertical"></nz-divider>
 
-        <span>失败 ：<span class="color">0</span></span>
-        <nz-divider [nzType]="vertical"></nz-divider>
+      <span>失败 ：<span class="color">0</span></span>
+      <nz-divider [nzType]="vertical"></nz-divider>
 
-        <span>完成 ：<span class="color">0</span></span>
-        <nz-divider [nzType]="vertical"></nz-divider>
+      <span>完成 ：<span class="color">0</span></span>
+      <nz-divider [nzType]="vertical"></nz-divider>
 
-        <span>调度 ：<span class="color">0</span></span>
-        <nz-divider [nzType]="vertical"></nz-divider>
+      <span>调度 ：<span class="color">0</span></span>
+      <nz-divider [nzType]="vertical"></nz-divider>
 
-        <span>取消中 ：<span class="color">0</span></span>
-        <nz-divider [nzType]="vertical"></nz-divider>
+      <span>取消中 ：<span class="color">0</span></span>
+      <nz-divider [nzType]="vertical"></nz-divider>
 
-        <span>已取消 ：<span class="color">0</span></span>
+      <span>已取消 ：<span class="color">0</span></span>
 
-      </td>
-    </tr>
+    </td>
+  </tr>
 
-    <tr>
-      <td class="title">计算耗时</td>
-      <td class="title">输入TPS</td>
-      <td class="title">输入RPS</td>
-      <td class="title">输出RPS</td>
-      <td class="title">输入BPS</td>
-      <td class="title">消耗CU</td>
-      <td class="title">启动时间</td>
-      <td class="title">运行时长</td>
-    </tr>
+  <tr>
+    <td class="title">计算耗时</td>
+    <td class="title">输入TPS</td>
+    <td class="title">输入RPS</td>
+    <td class="title">输出RPS</td>
+    <td class="title">输入BPS</td>
+    <td class="title">消耗CU</td>
+    <td class="title">启动时间</td>
+    <td class="title">运行时长</td>
+  </tr>
 
-    <tr>
-      <td>1ms</td>
-      <td>0 Block/s</td>
-      <td>0 条/s</td>
-      <td>0 条/s</td>
-      <td>0 B/s</td>
-      <td>1.2 CU</td>
-      <td>2018-05-29 12:13:20</td>
-      <td>4小时15分钟24秒</td>
-    </tr>
+  <tr>
+    <td>1ms</td>
+    <td>0 Block/s</td>
+    <td>0 条/s</td>
+    <td>0 条/s</td>
+    <td>0 B/s</td>
+    <td>1.2 CU</td>
+    <td>2018-05-29 12:13:20</td>
+    <td>4小时15分钟24秒</td>
+  </tr>
   </tbody>
 </table>
 
@@ -93,38 +93,49 @@
     <thead nzSingleSort>
     <tr>
       <th nzWidth="50px" nzLeft="0px"
-          nzShowSort nzSortKey="test">ID</th>
+          nzShowSort nzSortKey="test">ID
+      </th>
       <th nzWidth="200px"
-          nzShowSort nzSortKey="test">Name</th>
+          nzShowSort nzSortKey="test">Name
+      </th>
       <th nzWidth="100px"
-          nzShowSort nzSortKey="test">Status</th>
+          nzShowSort nzSortKey="test">Status
+      </th>
       <th nzWidth="100px"
-          nzShowSort nzSortKey="test">InQ max</th>
+          nzShowSort nzSortKey="test">InQ max
+      </th>
       <th nzWidth="100px"
-          nzShowSort nzSortKey="test">OutQ max</th>
+          nzShowSort nzSortKey="test">OutQ max
+      </th>
       <th nzWidth="120px"
-          nzShowSort nzSortKey="test">RecCnt sum</th>
+          nzShowSort nzSortKey="test">RecCnt sum
+      </th>
       <th nzWidth="120px"
-          nzShowSort nzSortKey="test">SendCnt sum</th>
+          nzShowSort nzSortKey="test">SendCnt sum
+      </th>
       <th nzWidth="120px"
-          nzShowSort nzSortKey="test">TPS sum</th>
+          nzShowSort nzSortKey="test">TPS sum
+      </th>
       <th nzWidth="120px"
-          nzShowSort nzSortKey="test">Delay max</th>
+          nzShowSort nzSortKey="test">Delay max
+      </th>
       <th nzWidth="150px"
-          nzShowSort nzSortKey="test">StartTime</th>
+          nzShowSort nzSortKey="test">StartTime
+      </th>
       <th nzWidth="120px"
-          nzShowSort nzSortKey="test">Durations(s)</th>
+          nzShowSort nzSortKey="test">Durations(s)
+      </th>
       <th nzWidth="100px" nzRight="0px">Task</th>
     </tr>
     </thead>
 
     <tbody>
     <tr *ngFor="let vertex of vertexListTable.data">
-      <td>
+      <td nzLeft="0px">
         <a nz-tooltip="点击在图上定位">{{vertex.ID}}</a>
       </td>
       <td class="name">
-        {{vertex.Name}}
+          <a [nz-tooltip]="vertex.Name" >{{vertex.Name}}</a>
       </td>
       <td>
         <span class="background status RUNNING">{{vertex.Status}}</span>
@@ -137,7 +148,7 @@
       <td>{{vertex.Delay_max}}</td>
       <td>{{vertex.StartTime}}</td>
       <td>{{vertex.Duration}}</td>
-      <td>
+      <td nzRight="0px">
         <span class="task background RUNNING" nz-tooltip="状态：RUNNING">3</span>
       </td>
     </tr>
