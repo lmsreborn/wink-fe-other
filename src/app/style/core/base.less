@@ -48,7 +48,6 @@ input::-ms-clear, input::-ms-reveal {
   -webkit-font-smoothing: antialiased;
   padding: 0;
   margin: 0;
-
 }
 
 html {
@@ -58,6 +57,25 @@ html {
   -ms-text-size-adjust: 100%; // 4
   -ms-overflow-style: scrollbar; // 5
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0); // 6
+  ::-webkit-scrollbar{
+      width: 12px;
+  }
+  ::-webkit-scrollbar-corner{
+    background: #404040;
+  }
+
+  ::-webkit-scrollbar-thumb{
+    width: 12px;
+    height: 12px;
+    background: #303030;
+    border-radius: 0;
+  }
+
+  ::-webkit-scrollbar-track{
+    background-color: rgba(0,0,0,.02);
+    border-radius: 0;
+  }
+
 }
 
 // IE10+ doesn't honor `<meta name="viewport">` in some cases.
