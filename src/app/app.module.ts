@@ -28,7 +28,7 @@ import {RouterModule, Routes} from '@angular/router';
 import { WinkOverviewInstanceInfoComponent } from './pages/oveview/wink-overview-instance-info/wink-overview-instance-info.component';
 import { WinkOverviewProjectCurveComponent } from './pages/oveview/wink-overview-project-curve/wink-overview-project-curve.component';
 import { WinkInstanceStatusBarComponent } from './wink-instance-status-bar/wink-instance-status-bar.component';
-import { WinkTimeRangeComponent } from './pages/oveview/wink-time-range/wink-time-range.component';
+import { WinkTimeRangeComponent } from './wink-time-range/wink-time-range.component';
 import { WinkOverviewProjectInfoComponent } from './pages/oveview/wink-overview-project-info/wink-overview-project-info.component';
 import { WinkOverviewUpgradeInfoComponent } from './pages/oveview/wink-overview-upgrade-info/wink-overview-upgrade-info.component';
 import { WinkOverviewUserGuideComponent } from './pages/oveview/wink-overview-user-guide/wink-overview-user-guide.component';
@@ -41,6 +41,9 @@ import { WinkOperateInstanceHeaderComponent } from './pages/operate/wink-operate
 import { WinkOperateInstanceDashboardComponent } from './pages/operate/wink-operate-instance-dashboard/wink-operate-instance-dashboard.component';
 import { WinkDagreComponent } from './pages/operate/wink-dagre/wink-dagre.component';
 import { WinkSvgContainerComponent } from './pages/operate/wink-svg-container/wink-svg-container.component';
+import { WinkOperateInstanceCurveComponent } from './pages/operate/wink-operate-instance-curve/wink-operate-instance-curve.component';
+import { WinkDatepickerComponent } from './wink-datepicker/wink-datepicker.component';
+import { WinkCollapseComponent } from './wink-collapse/wink-collapse.component';
 
 
 // TODO: 分离，添加router module
@@ -93,6 +96,9 @@ const appRoutes: Routes = [
     WinkOperateInstanceDashboardComponent,
     WinkDagreComponent,
     WinkSvgContainerComponent,
+    WinkOperateInstanceCurveComponent,
+    WinkDatepickerComponent,
+    WinkCollapseComponent,
   ],
   imports: [
     BrowserModule,

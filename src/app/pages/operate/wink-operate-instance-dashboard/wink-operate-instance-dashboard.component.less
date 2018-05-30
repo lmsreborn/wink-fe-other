@@ -24,6 +24,10 @@
       }
     }
 
+    &:last-child{
+      border-right: none;
+    }
+
   }
 }
 
@@ -87,7 +91,7 @@
   border-top: 1px solid #303030;
 }
 
-td.name ::ng-deep {
+td.name {
   position: relative;
   overflow: hidden;
 
@@ -127,8 +131,6 @@ td.name ::ng-deep {
   }
 }
 
-:host ::ng-deep .ant-tooltip-inner{
-  font-size: 12px;
-  max-width: 50vw;
-  word-break: break-all;
+:host ::ng-deep .ant-slider-vertical{
+  margin: 6px 12px;
 }
