@@ -1,11 +1,56 @@
-.small{
+.small {
   height: 42px;
 }
 
-app-wink-time-range{
+app-wink-time-range {
   border-bottom: 1px solid #303030;
-
-
 }
 
+nz-collapse {
+  border-bottom: 1px solid #303030;
+
+  ::ng-deep {
+    .ant-collapse {
+
+      background-color: #404040;
+      border: 0;
+    }
+
+    .ant-collapse-header {
+      border-top: 1px solid #303030;
+      padding: 6px 0 6px 40px !important;
+      background: #505050;
+    }
+
+    nz-collapse-panel:first-child .ant-collapse-header {
+      border-top: none;
+    }
+
+    //app-wink-echarts{
+    //  width: 50%;
+    //  border: 1px solid #303030;
+    //  float: left;
+    //  border-top: none;
+    //  border-left: none;
+    //  margin-right: -1px;
+    //  margin-bottom: -1px;
+    //}
+  }
+}
+
+.container {
+  height: ~"calc(100% - 42px)";
+  overflow: auto;
+}
+
+app-wink-echarts{
+  width: 50%;
+  border: 1px solid #303030;
+  float: left;
+  border-top: none;
+  border-left: none;
+  margin-right: -1px;
+  margin-bottom: -1px;
+
+}
 

@@ -44,6 +44,7 @@ import { WinkSvgContainerComponent } from './pages/operate/wink-svg-container/wi
 import { WinkOperateInstanceCurveComponent } from './pages/operate/wink-operate-instance-curve/wink-operate-instance-curve.component';
 import { WinkCollapseComponent } from './wink-collapse/wink-collapse.component';
 import { NZ_I18N, en_US } from 'ng-zorro-antd';
+import { WinkEchartsComponent } from './wink-echarts/wink-echarts.component';
 
 
 // TODO: 分离，添加router module
@@ -98,6 +99,7 @@ const appRoutes: Routes = [
     WinkSvgContainerComponent,
     WinkOperateInstanceCurveComponent,
     WinkCollapseComponent,
+    WinkEchartsComponent,
   ],
   imports: [
     BrowserModule,
