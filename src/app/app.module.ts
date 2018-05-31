@@ -25,26 +25,27 @@ import {MonacoEditorModule} from 'ngx-monaco-editor';
 import {WinkOverviewRootContainerComponent} from './pages/oveview/wink-overview-root-container/wink-overview-root-container.component';
 import {WinkDevelopRootContainerComponent} from './pages/develop/wink-develop-root-container/wink-develop-root-container.component';
 import {RouterModule, Routes} from '@angular/router';
-import { WinkOverviewInstanceInfoComponent } from './pages/oveview/wink-overview-instance-info/wink-overview-instance-info.component';
-import { WinkOverviewProjectCurveComponent } from './pages/oveview/wink-overview-project-curve/wink-overview-project-curve.component';
-import { WinkInstanceStatusBarComponent } from './wink-instance-status-bar/wink-instance-status-bar.component';
-import { WinkTimeRangeComponent } from './wink-time-range/wink-time-range.component';
-import { WinkOverviewProjectInfoComponent } from './pages/oveview/wink-overview-project-info/wink-overview-project-info.component';
-import { WinkOverviewUpgradeInfoComponent } from './pages/oveview/wink-overview-upgrade-info/wink-overview-upgrade-info.component';
-import { WinkOverviewUserGuideComponent } from './pages/oveview/wink-overview-user-guide/wink-overview-user-guide.component';
-import { WinkOperateRootContainerComponent } from './pages/operate/wink-operate-root-container/wink-operate-root-container.component';
-import { WinkOperateInstanceListComponent } from './pages/operate/wink-operate-instance-list/wink-operate-instance-list.component';
-import { WinkOperateInstanceActionComponent } from './wink-operate-instance-action/wink-operate-instance-action.component';
-import { WinkOperateInstanceDetailComponent } from './pages/operate/wink-operate-instance-detail/wink-operate-instance-detail.component';
-import { WinkOperateInstanceListTestComponent } from './pages/operate/wink-operate-instance-list-test/wink-operate-instance-list-test.component';
-import { WinkOperateInstanceHeaderComponent } from './pages/operate/wink-operate-instance-header/wink-operate-instance-header.component';
-import { WinkOperateInstanceDashboardComponent } from './pages/operate/wink-operate-instance-dashboard/wink-operate-instance-dashboard.component';
-import { WinkDagreComponent } from './pages/operate/wink-dagre/wink-dagre.component';
-import { WinkSvgContainerComponent } from './pages/operate/wink-svg-container/wink-svg-container.component';
-import { WinkOperateInstanceCurveComponent } from './pages/operate/wink-operate-instance-curve/wink-operate-instance-curve.component';
-import { WinkCollapseComponent } from './wink-collapse/wink-collapse.component';
-import { NZ_I18N, en_US } from 'ng-zorro-antd';
-import { WinkEchartsComponent } from './wink-echarts/wink-echarts.component';
+import {WinkOverviewInstanceInfoComponent} from './pages/oveview/wink-overview-instance-info/wink-overview-instance-info.component';
+import {WinkOverviewProjectCurveComponent} from './pages/oveview/wink-overview-project-curve/wink-overview-project-curve.component';
+import {WinkInstanceStatusBarComponent} from './wink-instance-status-bar/wink-instance-status-bar.component';
+import {WinkTimeRangeComponent} from './wink-time-range/wink-time-range.component';
+import {WinkOverviewProjectInfoComponent} from './pages/oveview/wink-overview-project-info/wink-overview-project-info.component';
+import {WinkOverviewUpgradeInfoComponent} from './pages/oveview/wink-overview-upgrade-info/wink-overview-upgrade-info.component';
+import {WinkOverviewUserGuideComponent} from './pages/oveview/wink-overview-user-guide/wink-overview-user-guide.component';
+import {WinkOperateRootContainerComponent} from './pages/operate/wink-operate-root-container/wink-operate-root-container.component';
+import {WinkOperateInstanceListComponent} from './pages/operate/wink-operate-instance-list/wink-operate-instance-list.component';
+import {WinkOperateInstanceActionComponent} from './wink-operate-instance-action/wink-operate-instance-action.component';
+import {WinkOperateInstanceDetailComponent} from './pages/operate/wink-operate-instance-detail/wink-operate-instance-detail.component';
+import {WinkOperateInstanceListTestComponent} from './pages/operate/wink-operate-instance-list-test/wink-operate-instance-list-test.component';
+import {WinkOperateInstanceHeaderComponent} from './pages/operate/wink-operate-instance-header/wink-operate-instance-header.component';
+import {WinkOperateInstanceDashboardComponent} from './pages/operate/wink-operate-instance-dashboard/wink-operate-instance-dashboard.component';
+import {WinkDagreComponent} from './pages/operate/wink-dagre/wink-dagre.component';
+import {WinkSvgContainerComponent} from './pages/operate/wink-svg-container/wink-svg-container.component';
+import {WinkOperateInstanceCurveComponent} from './pages/operate/wink-operate-instance-curve/wink-operate-instance-curve.component';
+import {WinkCollapseComponent} from './wink-collapse/wink-collapse.component';
+import {NZ_I18N, en_US} from 'ng-zorro-antd';
+import {WinkEchartsComponent} from './wink-echarts/wink-echarts.component';
+import {NgxEchartsModule} from 'ngx-echarts';
 
 
 // TODO: 分离，添加router module
@@ -112,9 +113,10 @@ const appRoutes: Routes = [
     // NgZorroAntdModuleX.forRoot(),
     NgZorroAntdModule.forRoot(),
     MonacoEditorModule.forRoot(),
+    NgxEchartsModule,
     RouterModule.forRoot(
       appRoutes,
-      { enableTracing: true } // <-- debugging purposes only
+      {enableTracing: true} // <-- debugging purposes only
     )
   ],
   bootstrap: [AppComponent],
