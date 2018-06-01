@@ -82,6 +82,10 @@ export class WinkEchartsComponent implements OnInit {
         }
       ]
     };
+
+
+
+
   }
 
 }

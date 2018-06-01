@@ -13,10 +13,76 @@
 
 
 <nz-tabset [nzSize]="'small'" [nzTabPosition]="'top'" [nzType]="'line'">
+
   <nz-tab nzTitle="Vertex Topology">
     <app-wink-dagre></app-wink-dagre>
   </nz-tab>
-  <nz-tab nzTitle="SubTask List"></nz-tab>
+
+
+  <nz-tab nzTitle="SubTask List">
+    <nz-table #subTaskListTable
+              [nzSize]="'small'"
+              [nzBordered]="false"
+              [nzData]="subTaskListData"
+              [nzScroll]="{x:'1450px'}"
+              [nzShowPagination]="false"
+              class="card-table small-table">
+
+      <thead nzSingleSort>
+      <tr>
+        <th nzLeft="0px"
+            nzShowSort nzSortKey="test">ID
+        </th>
+        <th nzShowSort nzSortKey="id">操作
+        </th>
+        <th nzShowSort nzSortKey="queue_in_cnt">InQueue
+        </th>
+        <th nzShowSort nzSortKey="queue_out_cnt">OutQueue
+        </th>
+        <th nzShowSort nzSortKey="num_records_in">RecvCnt
+        </th>
+        <th nzShowSort nzSortKey="num_records_out">SendCnt
+        </th>
+        <th nzShowSort nzSortKey="tps">TPS
+        </th>
+        <th nzShowSort nzSortKey="retries">Retries
+        </th>
+        <th nzShowSort nzSortKey="duration">Duration
+        </th>
+        <th nzShowSort nzSortKey="start_time">StartTime
+        </th>
+        <th nzShowSort nzSortKey="stop_time">StopTime
+        </th>
+        <th nzRight="0px" nzShowSort nzSortKey="status">Status</th>
+      </tr>
+      </thead>
+
+      <tbody>
+      <tr *ngFor="let subTask of subTaskListTable.data">
+        <td nzLeft="0px">
+          <a nz-tooltip="查看历史">{{subTask.ID}}</a>
+        </td>
+        <td class="name">
+          <a>跳转TaskExecutor日志</a>
+        </td>
+        <td>{{subTask.queue_in_cnt}}</td>
+        <td>{{subTask.queue_out_cnt}}</td>
+        <td>{{subTask.num_records_in}}</td>
+        <td>{{subTask.num_records_out}}</td>
+        <td>{{subTask.tps}}</td>
+        <td>{{subTask.retries}}</td>
+        <td>{{subTask.duration}}</td>
+        <td>{{subTask.start_time}}</td>
+        <td>{{subTask.stop_time}}</td>
+        <td nzRight="0px">
+          <span class="status background RUNNING">{{subTask.status}}</span>
+        </td>
+      </tr>
+      </tbody>
+
+
+    </nz-table>
+  </nz-tab>
   <nz-tab nzTitle="Metrics Graph"></nz-tab>
   <nz-tab nzTitle="Metrics Data"></nz-tab>
   <nz-tab nzTitle="Accumulators"></nz-tab>
