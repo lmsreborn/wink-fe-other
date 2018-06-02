@@ -37,3 +37,4 @@
 12. @popover-bg: #404040;
 13  @background-color-light : #505050;
 14  @slider-rail-background-color:        #505050;
+15. @time-picker-selected-bg: #505050    数据曲线，最近10分钟后的选择时间，点选择日期，出现的地方
