@@ -14,24 +14,57 @@ nz-collapse {
 
       background-color: #404040;
       border: 0;
+
+      & > .ant-collapse-item{
+
+        & > .ant-collapse-header{
+          line-height: 22px;
+          color: rgba(255,255,255,.85);
+          cursor: pointer;
+          position: relative;
+          transition: all .3s;
+        }
+      }
+    }
+
+    &.ant-collapse-borderless{
+      & > .ant-collapse-item > .ant-collapse-content{
+        background-color: transparent;
+        border-top: 0;
+      }
     }
 
     .ant-collapse-header {
       border-top: 1px solid #303030;
       padding: 6px 0 6px 40px !important;
       background: #505050;
+      i{
+        line-height: 34px!important;
+      }
+      //为了那个向下的箭头
+    }
+
+    .ant-collapse-content{
+      padding: 0!important;
+      //height: 1345px;
+      &.ant-collapse-content-active{
+        border-top: 1px solid #303030!important;
+        overflow: visible!important;
+      }
     }
 
     nz-collapse-panel{
       .ant-collapse-content-box {
-
-        height: 500px;
+        padding: 0!important;
       }
     }
 
     nz-collapse-panel:first-child .ant-collapse-header {
       border-top: none;
+    }
 
+    .ant-collapse-item{
+      border-bottom: none;
     }
 
     //app-wink-echarts{
@@ -60,4 +93,26 @@ app-wink-echarts{
   margin-right: -1px;
   margin-bottom: -1px;
 }
+
+:host ::ng-deep {
+  .ant-collapse-item{
+    border-bottom: none!important
+  }
+
+
+  //TODO: 搞懂原始方法
+  .overview-panel .ant-collapse-content{
+    //每张图高度 269px, 再加1 pxborder
+    height: 1346px;
+  }
+
+  .advanced-view-panel .ant-collapse-content{
+    height: 1615px
+  }
+
+  .delay-panel .ant-collapse-content{
+    height: 270px;
+  }
+}
+
 

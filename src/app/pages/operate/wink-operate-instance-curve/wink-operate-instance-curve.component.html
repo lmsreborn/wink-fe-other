@@ -1,32 +1,47 @@
 <app-wink-time-range class="small"></app-wink-time-range>
 <div class="container">
-  <nz-collapse>
-    <nz-collapse-panel [nzHeader]="'Overview'" [nzActive]="true">
+  <nz-collapse [nzBordered]="false">
 
-      <app-wink-echarts></app-wink-echarts>
+    <!--TODO: 搞懂这个高度，怎么不设置-->
+    <nz-collapse-panel [nzHeader]="overviewPanel.header"
+                       [nzActive]="overviewPanel.isActive"
+                       class="overview-panel">
+
+      <app-wink-echarts *ngFor="let chart of overviewPanel.charts"
+                        [title]="chart.title"
+                        [tooltipInfo]="chart.info">
+      </app-wink-echarts>
+
 
     </nz-collapse-panel>
 
-    <!--<nz-collapse-panel [nzHeader]="'Advanced View'" [nzActive]="false">-->
-    <!--</nz-collapse-panel>-->
+    <nz-collapse-panel [nzHeader]="advancedviewPanel.header"
+                       [nzActive]="advancedviewPanel.isActive"
+                       class="advanced-view-panel">
+      <app-wink-echarts *ngFor="let chart of advancedviewPanel.charts"
+                        [title]="chart.title"
+                        [tooltipInfo]="chart.info">
 
-    <!--<nz-collapse-panel [nzHeader]="'Delay'" [nzActive]="false">-->
-    <!--</nz-collapse-panel>-->
+      </app-wink-echarts>
+    </nz-collapse-panel>
 
-    <!--<nz-collapse-panel [nzHeader]="'Throughput'" [nzActive]="false">-->
-    <!--</nz-collapse-panel>-->
+    <nz-collapse-panel [nzHeader]="'Delay'" [nzActive]="false" class="delay-panel">
+    </nz-collapse-panel>
 
-    <!--<nz-collapse-panel [nzHeader]="'Queue'" [nzActive]="false">-->
-    <!--</nz-collapse-panel>-->
+    <nz-collapse-panel [nzHeader]="'Throughput'" [nzActive]="false" class="throughput-panel">
+    </nz-collapse-panel>
 
-    <!--<nz-collapse-panel [nzHeader]="'Tracing'" [nzActive]="false">-->
-    <!--</nz-collapse-panel>-->
+    <nz-collapse-panel [nzHeader]="'Queue'" [nzActive]="false" class="queue-panel">
+    </nz-collapse-panel>
 
-    <!--<nz-collapse-panel [nzHeader]="'Process'" [nzActive]="false">-->
-    <!--</nz-collapse-panel>-->
+    <nz-collapse-panel [nzHeader]="'Tracing'" [nzActive]="false" class="tracing-panel">
+    </nz-collapse-panel>
 
-    <!--<nz-collapse-panel [nzHeader]="'JVM'" [nzActive]="false">-->
-    <!--</nz-collapse-panel>-->
+    <nz-collapse-panel [nzHeader]="'Process'" [nzActive]="false" class="process-panel">
+    </nz-collapse-panel>
+
+    <nz-collapse-panel [nzHeader]="'JVM'" [nzActive]="false" class="jvm-panel">
+    </nz-collapse-panel>
 
   </nz-collapse>
 
