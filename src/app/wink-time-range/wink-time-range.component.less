@@ -4,7 +4,6 @@
 //  padding: 0 12px;
 //}
 
-
 .time-range ::ng-deep {
 
   label {
@@ -29,18 +28,22 @@
   height: 55px;
 }
 
-.small{
+.small {
   height: 42px;
 }
 
-.range-picker{
+.range-picker {
   margin-left: 12px;
 }
 
-nz-date-picker{
+nz-date-picker {
   width: 200px;
   margin: 0 6px;
 }
 
+//为了最近10分钟那块，没有border
+:host ::ng-deep .ant-radio-button-wrapper-checked::before{
+  content: none;
+}
 
 
