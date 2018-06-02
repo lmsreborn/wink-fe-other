@@ -84,6 +84,14 @@
     </nz-table>
   </nz-tab>
   <nz-tab nzTitle="Metrics Graph">
+    <app-wink-time-range class="small"></app-wink-time-range>
+    <div class="echarts-container">
+      <app-wink-echarts [title]="'计算耗时'" [tooltipInfo]="'处理流数据平均耗时'"></app-wink-echarts>
+      <app-wink-echarts [title]="'数据输入'" [tooltipInfo]="'每秒读取数据源表的RPS的统计'"></app-wink-echarts>
+      <app-wink-echarts [title]="'数据输出'" [tooltipInfo]="'每秒写入结果表的RPS的统计'"></app-wink-echarts>
+      <app-wink-echarts [title]="'输入队列'" [tooltipInfo]="'输入队列'"></app-wink-echarts>
+      <app-wink-echarts [title]="'输出队列'" [tooltipInfo]="'输出队列'"></app-wink-echarts>
+    </div>
   </nz-tab>
   <nz-tab nzTitle="Metrics Data"></nz-tab>
   <nz-tab nzTitle="Accumulators"></nz-tab>

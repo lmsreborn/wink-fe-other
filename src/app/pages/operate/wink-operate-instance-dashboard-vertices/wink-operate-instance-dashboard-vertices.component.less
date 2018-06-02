@@ -1,27 +1,47 @@
-.inner-router-breadcrumb{
+.inner-router-breadcrumb {
   padding: 12px;
   font-weight: 500;
   border-bottom: 1px solid #303030;
 }
 
-:host ::ng-deep nz-breadcrumb-item:last-child{
-  color: rgba(255,255,255,.85)!important;
+:host ::ng-deep nz-breadcrumb-item:last-child {
+  color: rgba(255, 255, 255, .85) !important;
 }
 
-app-wink-dagre{
+app-wink-dagre {
   min-height: 200px;
 }
 
 :host ::ng-deep {
 
-  .ant-tabs-bar{
+  .ant-tabs-bar {
     margin: 0;
   }
 
-  .small-table .ant-table{
+  .small-table .ant-table {
     border-radius: 0;
     border: 0;
     font-size: 12px;
+  }
+}
+
+app-wink-time-range{
+  height: 42px;
+}
+
+.echarts-container {
+  width: 100%;
+  height: ~"calc(100% - 42px)";
+  overflow: auto;
+  border-top: 1px solid #303030;
+
+  app-wink-echarts {
+    width: 50%;
+    float: left;
+    border: 1px solid #303030;
+    border-left: none;
+    margin-right: -1px;
+    margin-top: -1px;
   }
 }
 
