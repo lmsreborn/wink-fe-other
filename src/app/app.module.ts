@@ -47,6 +47,7 @@ import {NZ_I18N, en_US} from 'ng-zorro-antd';
 import {WinkEchartsComponent} from './wink-echarts/wink-echarts.component';
 import {NgxEchartsModule} from 'ngx-echarts';
 import { WinkOperateInstanceDashboardVerticesComponent } from './pages/operate/wink-operate-instance-dashboard-vertices/wink-operate-instance-dashboard-vertices.component';
+import { WinkOperateInstanceFailoverComponent } from './pages/operate/wink-operate-instance-failover/wink-operate-instance-failover.component';
 
 
 // TODO: 分离，添加router module
@@ -103,6 +104,7 @@ const appRoutes: Routes = [
     WinkCollapseComponent,
     WinkEchartsComponent,
     WinkOperateInstanceDashboardVerticesComponent,
+    WinkOperateInstanceFailoverComponent,
   ],
   imports: [
     BrowserModule,
