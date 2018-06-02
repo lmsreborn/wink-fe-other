@@ -1,20 +1,25 @@
 <div class="wrapper">
   <div class="title">
 
-    FailOver Rate
+    {{title}}
 
     <nz-tooltip [nzPlacement]="'top'">
       <span nz-tooltip class="info"><i class="anticon anticon-info-circle-o"></i>
       <ng-template #nzTemplate>
-        <span class="tooltip-title">衡量当前Job发生failover的频率，越低越好</span>
+        <span class="tooltip-title">{{tooltipInfo}}</span>
+
       </ng-template>
       </span>
     </nz-tooltip>
 
+    <span class="operate">
+      <i class="anticon anticon-arrows-alt" nz-tooltip="全屏查看"></i>
+    </span>
+
+
   </div>
 
-  <div class="chart" style="-webkit-tap-highlight-color: transparent; user-select: none;">
-    <div echarts [options]="echartOption" class="echartsStyle"></div>
+  <div  echarts [options]="echartOption" class="chart" style="-webkit-tap-highlight-color: transparent; user-select: none;">
   </div>
 
 
