@@ -25,13 +25,20 @@
       </app-wink-echarts>
     </nz-collapse-panel>
 
-    <nz-collapse-panel [nzHeader]="delayPanel.header"
-                       [nzActive]="delayPanel.isActive"
+
+    <nz-collapse-panel [nzHeader]="'Delay'"
+                       [nzActive]="false"
                        class="delay-panel">
-      <app-wink-echarts *ngFor="let chart of delayPanel.charts"
-                        [title]="chart.title"
-                        [tooltipInfo]="chart.info">
+
+      <app-wink-echarts [title]="'Source SubTask 最大延迟 Top 15'"
+                        [tooltipInfo]="'Source SubTask 最大延迟 Top 15'">
+      </app-wink-echarts>
+
+      <app-wink-echarts [title]="'读TT延迟'"
+                        [tooltipInfo]="'读TT延迟'">
+      </app-wink-echarts>
     </nz-collapse-panel>
+
 
     <nz-collapse-panel [nzHeader]="throughputPanel.header"
                        [nzActive]="throughputPanel.isActive"
@@ -39,6 +46,7 @@
       <app-wink-echarts *ngFor="let chart of throughputPanel.charts"
                         [title]="chart.title"
                         [tooltipInfo]="chart.info">
+      </app-wink-echarts>
     </nz-collapse-panel>
 
     <nz-collapse-panel [nzHeader]="queuePanel.header"
@@ -47,15 +55,69 @@
       <app-wink-echarts *ngFor="let chart of throughputPanel.charts"
                         [title]="chart.title"
                         [tooltipInfo]="chart.info">
+      </app-wink-echarts>
     </nz-collapse-panel>
 
-    <nz-collapse-panel [nzHeader]="'Tracing'" [nzActive]="false" class="tracing-panel">
+    <nz-collapse-panel [nzHeader]="'Tracing'"
+                       [nzActive]="false"
+                       class="tracing-panel">
+
+      <app-wink-echarts [title]="'Time Used In Processing Per Second'"
+                        [tooltipInfo]="'Time Used In Processing Per Second'">
+      </app-wink-echarts>
+
+      <app-wink-echarts [title]="'Time Used In Waiting Oputput Per Second'"
+                        [tooltipInfo]="'Time Used In Waiting Oputput Per Second'">
+      </app-wink-echarts>
+
+      <app-wink-echarts [title]="'TaskLatency Histogram Mean'"
+                        [tooltipInfo]="'TaskLatency Histogram Mean'">
+      </app-wink-echarts>
+
+      <app-wink-echarts [title]="'WaitOutput Histogram Mean'"
+                        [tooltipInfo]="'WaitOutput Histogram Mean'">
+      </app-wink-echarts>
+
+      <app-wink-echarts [title]="'WaitInput Histogram Mean'"
+                        [tooltipInfo]="'WaitInput Histogram Mean'">
+      </app-wink-echarts>
+
+      <app-wink-echarts [title]="'PartitionLatency Mean'"
+                        [tooltipInfo]="'PartitionLatency Mean'"></app-wink-echarts>
     </nz-collapse-panel>
 
-    <nz-collapse-panel [nzHeader]="'Process'" [nzActive]="false" class="process-panel">
+    <nz-collapse-panel [nzHeader]="'Process'"
+                       [nzActive]="false"
+                       class="process-panel">
+
+      <app-wink-echarts [title]="'Process MEM Rss'"
+                        [tooltipInfo]="'Process MEM Rss'">
+      </app-wink-echarts>
+
+      <app-wink-echarts [title]="'CPU Usage'"
+                        [tooltipInfo]="'CPU Usage'">
+      </app-wink-echarts>
     </nz-collapse-panel>
 
-    <nz-collapse-panel [nzHeader]="'JVM'" [nzActive]="false" class="jvm-panel">
+    <nz-collapse-panel [nzHeader]="'JVM'"
+                       [nzActive]="false"
+                       class="jvm-panel">
+
+      <app-wink-echarts [title]="'Memory Heap Used'"
+                        [tooltipInfo]="'Memory Heap Used'">
+      </app-wink-echarts>
+
+      <app-wink-echarts [title]="'Memory NonHeap Used'"
+                        [tooltipInfo]="'Memory NonHeap Used'">
+      </app-wink-echarts>
+
+      <app-wink-echarts [title]="'Threads Count'"
+                        [tooltipInfo]="'Threads Count'">
+      </app-wink-echarts>
+
+      <app-wink-echarts [title]="'GC(CMS)'"
+                        [tooltipInfo]="'GC(CMS)'">
+      </app-wink-echarts>
     </nz-collapse-panel>
 
   </nz-collapse>
