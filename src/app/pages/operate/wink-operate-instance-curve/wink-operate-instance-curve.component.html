@@ -25,13 +25,28 @@
       </app-wink-echarts>
     </nz-collapse-panel>
 
-    <nz-collapse-panel [nzHeader]="'Delay'" [nzActive]="false" class="delay-panel">
+    <nz-collapse-panel [nzHeader]="delayPanel.header"
+                       [nzActive]="delayPanel.isActive"
+                       class="delay-panel">
+      <app-wink-echarts *ngFor="let chart of delayPanel.charts"
+                        [title]="chart.title"
+                        [tooltipInfo]="chart.info">
     </nz-collapse-panel>
 
-    <nz-collapse-panel [nzHeader]="'Throughput'" [nzActive]="false" class="throughput-panel">
+    <nz-collapse-panel [nzHeader]="throughputPanel.header"
+                       [nzActive]="throughputPanel.isActive"
+                       class="throughput-panel">
+      <app-wink-echarts *ngFor="let chart of throughputPanel.charts"
+                        [title]="chart.title"
+                        [tooltipInfo]="chart.info">
     </nz-collapse-panel>
 
-    <nz-collapse-panel [nzHeader]="'Queue'" [nzActive]="false" class="queue-panel">
+    <nz-collapse-panel [nzHeader]="queuePanel.header"
+                       [nzActive]="queuePanel.isActive"
+                       class="queue-panel">
+      <app-wink-echarts *ngFor="let chart of throughputPanel.charts"
+                        [title]="chart.title"
+                        [tooltipInfo]="chart.info">
     </nz-collapse-panel>
 
     <nz-collapse-panel [nzHeader]="'Tracing'" [nzActive]="false" class="tracing-panel">
