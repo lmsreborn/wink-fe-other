@@ -52,7 +52,7 @@
     <nz-collapse-panel [nzHeader]="queuePanel.header"
                        [nzActive]="queuePanel.isActive"
                        class="queue-panel">
-      <app-wink-echarts *ngFor="let chart of throughputPanel.charts"
+      <app-wink-echarts *ngFor="let chart of queuePanel.charts"
                         [title]="chart.title"
                         [tooltipInfo]="chart.info">
       </app-wink-echarts>
