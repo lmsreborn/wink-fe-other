@@ -1,3 +1,115 @@
-<nz-card class="instance-failover">
+<nz-card class="instance-detail">
+  <nz-card-tab>
+    <nz-tabset [nzSize]="'small'" [nzTabPosition]="'top'" [nzType]="'line'">
+      <nz-tab [nzTitle]="'Lastest FailOver'" (nzSelect)="showEditor()">
 
+        <!--<ngx-monaco-editor class="ngx-monaco-editor" [options]="editorOptions" [(ngModel)]="code"></ngx-monaco-editor>-->
+
+      </nz-tab>
+      <nz-tab [nzTitle]="'FailOver History'" (nzSelect)="updateIndex(1)"></nz-tab>
+    </nz-tabset>
+  </nz-card-tab>
+
+  <div class="wrapper">
+    <!--TODO: 设置tab, 到右边的时候，ngx-monaco-editor不显示-->
+    <!--<ngx-monaco-editor class="ngx-monaco-editor" [options]="editorOptions" [(ngModel)]="code"></ngx-monaco-editor>-->
+
+
+    <!--TODO: 表格不是100%-->
+    <nz-table #failOverTable
+              [nzSize]="'small'"
+              [nzBordered]="false"
+              [nzShowPagination]="false"
+              [nzData]="failOverHistory"
+              [nzScroll]="{x:'1050px'}"
+              class="card-table full-height-table small-table">
+      <thead>
+      <tr>
+        <th nzWidth="60px"></th>
+        <th nzWidth="50px">ID</th>
+        <th nzWidth="150px">Time</th>
+        <th nzWidth="300px">Name</th>
+        <th nzWidth="200px">Location</th>
+        <th nzWidth="60px">Attempt</th>
+      </tr>
+      </thead>
+
+      <!--TODO: 每两个tr是一组，点击前面那个，下面的display none消失-->
+      <tr *ngFor="let history of failOverTable.data">
+        <td class="ant-table-row-expand-icon-cell">
+          <!--<span class="ant-table-row-expand-icon ant-table-row-collapsed"></span>-->
+          <span class="ant-table-row-expand-icon ant-table-row-expanded"></span>
+        </td>
+        <td>{{history.id}}</td>
+        <td>{{history.Time}}</td>
+        <td>{{history.Name}}</td>
+        <td>{{history.Location}}</td>
+        <td>{{history.Attempt}}</td>
+
+        <!--<a>Action 一 {{data.name}}</a>-->
+        <!--<nz-divider nzType="vertical"></nz-divider>-->
+        <!--<a>Delete</a>-->
+        <!--</td>-->
+      </tr>
+      <tr class="ant-table-expanded-row">
+        <td class="expand-td" colspan="6">
+          <ngx-monaco-editor class="ngx-monaco-editor" [options]="editorOptions" [(ngModel)]="code"></ngx-monaco-editor>
+        </td>
+      </tr>
+
+      <tr *ngFor="let history of failOverTable.data">
+        <td class="ant-table-row-expand-icon-cell">
+          <!--<span class="ant-table-row-expand-icon ant-table-row-collapsed"></span>-->
+          <span class="ant-table-row-expand-icon ant-table-row-expanded"></span>
+        </td>
+        <td>{{history.id}}</td>
+        <td>{{history.Time}}</td>
+        <td>{{history.Name}}</td>
+        <td>{{history.Location}}</td>
+        <td>{{history.Attempt}}</td>
+
+        <!--<a>Action 一 {{data.name}}</a>-->
+        <!--<nz-divider nzType="vertical"></nz-divider>-->
+        <!--<a>Delete</a>-->
+        <!--</td>-->
+      </tr>
+
+      <tr *ngFor="let history of failOverTable.data">
+        <td class="ant-table-row-expand-icon-cell">
+          <!--<span class="ant-table-row-expand-icon ant-table-row-collapsed"></span>-->
+          <span class="ant-table-row-expand-icon ant-table-row-expanded"></span>
+        </td>
+        <td>{{history.id}}</td>
+        <td>{{history.Time}}</td>
+        <td>{{history.Name}}</td>
+        <td>{{history.Location}}</td>
+        <td>{{history.Attempt}}</td>
+
+        <!--<a>Action 一 {{data.name}}</a>-->
+        <!--<nz-divider nzType="vertical"></nz-divider>-->
+        <!--<a>Delete</a>-->
+        <!--</td>-->
+      </tr>
+
+      <tr *ngFor="let history of failOverTable.data">
+        <td class="ant-table-row-expand-icon-cell">
+          <!--<span class="ant-table-row-expand-icon ant-table-row-collapsed"></span>-->
+          <span class="ant-table-row-expand-icon ant-table-row-expanded"></span>
+        </td>
+        <td>{{history.id}}</td>
+        <td>{{history.Time}}</td>
+        <td>{{history.Name}}</td>
+        <td>{{history.Location}}</td>
+        <td>{{history.Attempt}}</td>
+
+        <!--<a>Action 一 {{data.name}}</a>-->
+        <!--<nz-divider nzType="vertical"></nz-divider>-->
+        <!--<a>Delete</a>-->
+        <!--</td>-->
+      </tr>
+
+
+      </tbody>
+    </nz-table>
+  </div>
 </nz-card>

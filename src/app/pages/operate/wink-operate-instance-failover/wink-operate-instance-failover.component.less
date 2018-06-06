@@ -1,12 +1,152 @@
-:host{
+:host {
   display: block;
   position: relative;
   height: 100%;
   padding: 12px;
 }
 
-nz-card.instance-failover{
+nz-card {
+  &.instance-detail {
+    height: 100%;
+    display: block;
+    position: relative;
+  }
+
+  ::ng-deep &.instance-detail {
+    & .ant-card-head {
+      min-height: auto;
+    }
+
+    & .ant-card-body{
+      height: ~"calc(100% - 35px)";
+    }
+  }
+
+}
+
+ngx-monaco-editor {
   height: 100%;
-  display: block;
+  //background: #2B2B2B;
+  //display: block;
   position: relative;
+  width: 100%;
+  overflow: hidden;
+  background: #404040;
+}
+
+.wrapper {
+  margin: -23px -24px -24px;
+  height: ~"calc(100% + 47px)";
+  overflow: hidden;
+  position: relative;
+  background: #404040;
+}
+
+.full-height-table{
+  display: block;
+  height: 100%;
+  position: relative;
+
+  ::ng-deep .ant-table-wrapper{
+    height: 100%;
+  }
+}
+
+.small-table ::ng-deep .ant-table{
+  border: 0;
+  border-radius: 0;
+  font-size: 12px;
+  margin-top: 1px;
+  height: 100%;
+}
+
+:host ::ng-deep .ant-table-body{
+  max-height: ~"calc(100% - 35px)";
+  overflow-y: scroll;
+  overflow-x: auto;
+
+  .ant-table-content{
+    height: 100%;
+  }
+}
+
+:host ::ng-deep nz-spin{
+  height: 100%;
+
+  & .ant-spin-nested-loading{
+    height: 100%;
+
+    & .ant-spin-container{
+      height: 100%;
+
+      & > div{
+        height: 100%;
+
+        & .ant-table{
+          height: 100%;
+
+          & .ant-table-content{
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+:host ::ng-deep .ant-table-scroll{
+  height: 100%;
+}
+.full-height-table .ant-table-wrapper nz-spin .ant-spin-nested-loading .ant-spin-container>div .ant-table, .full-height-table .ant-table-wrapper nz-spin .ant-spin-nested-loading .ant-spin-container>div .ant-table .ant-table-content, .full-height-table .ant-table-wrapper nz-spin .ant-spin-nested-loading .ant-spin-container>div .ant-table .ant-table-content .ant-table-scroll{
+  height: 100%;
+}
+
+:host ::ng-deep .ant-table-row-expand-icon{
+  cursor: pointer;
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  text-align: center;
+  line-height: 14px;
+  border: 1px solid #303030;
+  //-webkit-user-select: none;
+  //-moz-user-select: none;
+  //-ms-user-select: none;
+  user-select: none;
+  background: #404040;
+
+  //TODO: 还有这种操作
+  &.ant-table-row-collapsed:after{
+    content: '+';
+  }
+
+  &.ant-table-row-expanded:after{
+    content: '-';
+  }
+}
+
+:host ::ng-deep .ant-table-row-expand-icon-cell{
+  padding: 8px;
+}
+
+:host ::ng-deep .expand-td{
+  padding: 0!important;
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+:host ::ng-deep ngx-monaco-editor{
+  height: 100%;
+
+  //TODO: 定制monoco editor, 防止下边缘
+  .editor-container{
+    height: 100%;
+  }
+}
+
+:host ::ng-deep .ant-table-expanded-row{
+
+  //TODO: 点击，display none 消失的效果
+  //display: none;
 }

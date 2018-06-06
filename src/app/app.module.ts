@@ -54,7 +54,7 @@ import { WinkProfileProjectComponent } from './pages/profile/wink-profile-projec
 // TODO: 分离，添加router module
 const appRoutes: Routes = [
   {path: 'overview', component: WinkOverviewRootContainerComponent},
-  {path: 'develop', component: WinkOperateRootContainerComponent},
+  {path: 'develop', component: WinkDevelopRootContainerComponent},
   {path: 'operate', component: WinkOperateRootContainerComponent},
   {
     path: '',
