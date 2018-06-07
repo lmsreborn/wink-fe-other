@@ -3,12 +3,43 @@
     <nz-tabset [nzSize]="'small'" [nzTabPosition]="'top'" [nzType]="'line'">
       <nz-tab [nzTitle]="'Completed Checkpoints'">
 
-        <!--<ngx-monaco-editor class="ngx-monaco-editor" [options]="editorOptions" [(ngModel)]="code"></ngx-monaco-editor>-->
-
       </nz-tab>
       <nz-tab [nzTitle]="'Task Lastest Completed Checkpoint'"></nz-tab>
     </nz-tabset>
   </nz-card-tab>
+
+
+  <div class="wrapper">
+    <div class="info">
+      <div nz-col [nzSpan]="6" class="summary">
+        {{completedCheckpoints}} completed checkpoints
+      </div>
+
+      <div nz-col [nzSpan]="9" class="summary">
+        Duration(min/max/avg): {{minDuration}} / {{maxDuration}} /{{avgDuration}} (ms)
+      </div>
+
+      <div nz-col [nzSpan]="9" class="summary">
+        {{completedCheckpoints}} completed checkpoints
+      </div>
+    </div>
+
+
+    <nz-table #failOverTable
+              [nzSize]="'small'"
+              [nzBordered]="false"
+              [nzShowPagination]="false"
+              [nzData]="failOverHistory"
+              [nzScroll]="{x:'1050px'}"
+              class="card-table full-height-table small-table">
+
+
+      <!--TODO: easy 放后面-->
+
+
+    </nz-table>
+  </div>
+
 
 
 </nz-card>

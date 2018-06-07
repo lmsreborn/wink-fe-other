@@ -7,6 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WinkOperateInstanceCheckpointsComponent implements OnInit {
 
+
+  completedCheckpoints = 4465;
+
+
+  minDuration = 11;
+  maxDuration = 389;
+  avgDuration = 17;
+
   constructor() { }
 
   ngOnInit() {
