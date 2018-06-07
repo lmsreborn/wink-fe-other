@@ -50,6 +50,7 @@ import { WinkOperateInstanceDashboardVerticesComponent } from './pages/operate/w
 import { WinkOperateInstanceFailoverComponent } from './pages/operate/wink-operate-instance-failover/wink-operate-instance-failover.component';
 import { WinkProfileProjectComponent } from './pages/profile/wink-profile-project/wink-profile-project.component';
 import { WinkOperateInstanceCheckpointsComponent } from './pages/operate/wink-operate-instance-checkpoints/wink-operate-instance-checkpoints.component';
+import { WinkOperateInstanceJobmanagerComponent } from './pages/operate/wink-operate-instance-jobmanager/wink-operate-instance-jobmanager.component';
 
 
 // TODO: 分离，添加router module
@@ -109,6 +110,7 @@ const appRoutes: Routes = [
     WinkOperateInstanceFailoverComponent,
     WinkProfileProjectComponent,
     WinkOperateInstanceCheckpointsComponent,
+    WinkOperateInstanceJobmanagerComponent,
   ],
   imports: [
     BrowserModule,
